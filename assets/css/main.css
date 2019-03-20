@@ -1,0 +1,73 @@
+
+body
+{
+  margin:0px;
+    font-family: arial "cursive";
+    background-color:white;
+   }
+
+*
+{
+  transition-property: all !important;
+}
+
+
+
+a 
+{
+
+  text-decoration: none !important;
+}
+
+ #brand
+  {
+    width:70px;
+    height:70px;
+
+  }
+
+  #bc
+  {
+    width:17%;
+  }
+
+.btn1
+  {
+    transition-duration:0.4s;
+    
+  }
+
+  .btn1 : hover
+  {
+    transform:scale(1.25) !important;
+  }
+
+  #panel
+  {
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.4);
+    transition-duration: 0.4s;
+    background-color:white !important;
+    color:black !important;
+    padding:5px;}
+
+
+.foo
+{
+  background-color:#212529;
+  color:white;
+}
+
+
+.under
+{
+   background-color:#282D31;
+}
+
+
+
+
+
+#register
+{
+  
+}

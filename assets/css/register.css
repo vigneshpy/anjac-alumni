@@ -1,0 +1,89 @@
+	body
+	{
+
+	background-color: #eee ;
+
+	}
+
+
+
+	@media only screen and (max-width: 1200px) { 
+	#re{ 
+	display: none !important; 
+	} 
+	}
+	@media only screen and (max-width:1100px) 
+	{ 
+	#resi{ 
+	width:200px !important;
+	} 
+
+	#panel_size
+	{
+	width:30rem !important;
+
+	}
+	h1
+	{
+	font: 1.130em arial;
+	}
+	#re{ 
+	display: none; 
+	} 
+	}
+
+
+
+	@media only screen and (max-width: 900px) { 
+	.container1
+	{
+	margin-right:200px !important; 
+	}
+	#resi{ 
+	width:200px !important;
+	} 
+
+	#panel_size
+	{
+	width:16rem !important;
+
+	}
+	h1
+	{
+	font: 1.130em arial;
+	}
+	#re{ 
+	display: none; 
+	} 
+	}
+
+	.container1
+	{
+	margin-left:50px;
+	padding:70px;
+	padding-left:50px;
+	}
+	.gab
+	{
+	padding-right:0;
+	padding-left:0;
+	z-index: 1;
+	}
+
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+img {
+  /* The image used */
+
+background-image:url("../image/register.jpg");
+  /* Full height */
+  height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

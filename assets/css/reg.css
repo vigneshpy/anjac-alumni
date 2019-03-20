@@ -1,0 +1,288 @@
+
+
+    .quotes
+    {
+     font-family: 'Acme', sans-serif !important;
+      font-size: 47px;
+    }
+     @media only screen and (max-width:880px){
+      
+	.quotes{
+        display: none;
+
+
+      }
+     
+      
+        .img_size{
+            display: none;
+        }
+
+     
+      body
+      {
+        background-color: #929D9E;
+        background-color: #929D9E;
+        background-color: #E3E3E3;
+    
+      }
+ .card_custom{
+      /*position: absolute;*/
+      width: 380px;
+      top: 70px;
+height:700px !important;
+      padding: 20px;
+      box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+
+    }
+    
+    }
+
+    @media only screen and (max-width:1024px){
+      .quotes{
+        display: none;
+
+      }
+
+
+      .img_size{
+           
+   
+  
+    max-width: 100%!important;
+      z-index: -1;
+      filter: brightness(40%);
+      background-size:100%; 
+      object-fit: cover !important;
+      
+        
+      }
+      .card_custom
+      {
+        height:700px;
+        width: 315px !important;
+        margin: 0 auto !important;
+        }
+       body
+       {
+        font-size:14px;
+        margin: 0;
+
+       }
+
+      #i1
+      {
+        width: 212px;
+      }
+
+
+    }
+
+
+    *{
+      padding: 0px;
+      margin:0px;
+     
+    }
+    .img_size{
+      position: absolute;
+     max-width: 100%;
+    height: auto !important;
+    width: auto !important;
+      z-index: -1;
+      filter: brightness(40%);
+      background-size:100%; 
+
+    }
+    .des{
+      z-index: 1;
+    }
+    .card_custom{
+      /*position: absolute;*/
+      width: 380px;
+      top: 70px;
+      padding: 20px;
+      box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+
+    }
+
+    label{
+      color: #586069;
+      
+      font-size: 1.5em;
+    }
+    input{
+      padding: 10px;
+      border-radius:5px;
+    }
+    .btn_format{
+     
+      width: 160px;
+  
+      font-size: 1.25em;
+      box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
+    
+     
+    }
+    .quotes{
+      font-family:"aerial", sans-serif;
+      color: white;
+      text-align: center;
+      margin-top: 200px;
+
+      /* font-style: oblique; */
+      /* font-weight: bold; */
+    }
+    .pass_def{
+      padding-left: 3px;
+      margin-left: 5px;
+      margin-bottom: 5px;
+      color: #586069;
+      font-family:"calibri", serif;
+      font-size: .8em;
+    }
+=======
+
+    .quotes
+    {
+     font-family: 'Acme', sans-serif !important;
+      font-size: 47px;
+    }
+     @media only screen and (max-width:880px){
+      
+	.quotes{
+        display: none;
+
+
+      }
+     
+      
+        .img_size{
+            display: none;
+        }
+
+     
+      body
+      {
+        background-color: #929D9E;
+        background-color: #929D9E;
+        background-color: #E3E3E3;
+    
+      }
+ .card_custom{
+      /*position: absolute;*/
+      width: 380px;
+      top: 70px;
+height:700px !important;
+      padding: 20px;
+      box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+
+    }
+    
+    }
+
+    @media only screen and (max-width:1024px){
+      .quotes{
+        display: none;
+
+      }
+
+
+      .img_size{
+           
+   
+  
+    max-width: 100%!important;
+      z-index: -1;
+      filter: brightness(40%);
+      background-size:100%; 
+      object-fit: cover !important;
+      
+        
+      }
+      .card_custom
+      {
+        height:700px;
+        width: 315px !important;
+        margin: 0 auto !important;
+        }
+       body
+       {
+        font-size:14px;
+        margin: 0;
+
+       }
+
+      #i1
+      {
+        width: 212px;
+      }
+
+
+    }
+
+
+    *{
+      padding: 0px;
+      margin:0px;
+     
+    }
+    .img_size{
+      position: absolute;
+     max-width: 100%;
+    height: auto !important;
+    width: auto !important;
+      z-index: -1;
+      filter: brightness(40%);
+      background-size:100%; 
+
+    }
+    .des{
+      z-index: 1;
+    }
+    .card_custom{
+      /*position: absolute;*/
+      width: 380px;
+      top: 70px;
+      padding: 20px;
+      box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+
+    }
+
+    label{
+      color: #586069;
+      
+      font-size: 1.5em;
+    }
+    input{
+      padding: 10px;
+      border-radius:5px;
+    }
+    .btn_format{
+     
+      width: 160px;
+  
+      font-size: 1.25em;
+      box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
+    
+     
+    }
+    .quotes{
+      font-family:"aerial", sans-serif;
+      color: white;
+      text-align: center;
+      margin-top: 200px;
+
+      /* font-style: oblique; */
+      /* font-weight: bold; */
+    }
+    .pass_def{
+      padding-left: 3px;
+      margin-left: 5px;
+      margin-bottom: 5px;
+      color: #586069;
+      font-family:"calibri", serif;
+      font-size: .8em;
+    }
+
+  

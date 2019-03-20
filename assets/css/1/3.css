@@ -1,0 +1,1175 @@
+.profile-page-container {
+    display: inline-block;
+    width: 100%;
+    background: #f5f5f5;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.profile-page-container .new-feature-badge {
+    position: absolute;
+}
+
+.profile-page-container .mobile-view-block {
+    display: none;
+}
+
+.profile-page-container .profile-page-row {
+    max-width: 102rem;
+    width: 100%;
+    display: table;
+    margin: 0 auto;
+}
+
+.profile-page-container .profile-page-row.hide {
+    display: none;
+}
+
+.profile-page-container .has-tip {
+    border: 0;
+    margin-left: 0.7rem;
+}
+
+.profile-page-container div.action-btn span.btn-body {
+    text-transform: capitalize;
+}
+
+.profile-page-container div.action-btn i.btn-icon {
+    margin-right: 0.5rem;
+}
+
+.profile-page-container div.card {
+    margin: 1rem 0;
+}
+
+.profile-page-container div.card b,
+.profile-page-container div.card strong {
+    font-weight: 500;
+}
+
+.profile-page-container div.card:not(.accordion-card) {
+    padding: 1rem 0;
+}
+
+.profile-page-container .empty-card-block i {
+    font-size: 1.2rem;
+    float: left;
+    margin: 0.4rem 0.5rem 0 0;
+}
+
+.profile-page-container .accordion-card-title {
+    border-bottom-color: rgba(221, 221, 221, 0.5);
+}
+
+.profile-page-container div.card.accordion-card .accordion-card-body .card-block .crm-card-block {
+    padding: 0.8rem 0;
+}
+
+.profile-page-container div.card.accordion-card .crm-card-block .card-title {
+    text-transform: none;
+    text-align: justify;
+}
+
+.profile-page-container .accordion-card-body.crm-card {
+    padding: 0;
+}
+
+.profile-page-container .accordion-card-body.crm-card .crm-card-item {
+    padding: 1.5rem 0;
+}
+
+.profile-page-container div.accordion-card-body.crm-card .crm-card-item .card-block {
+    padding: 0.8rem 2.5rem;
+}
+
+#admin_toolbar,
+#toast_message {
+    z-index: 99999;
+}
+
+.profile-page-container div.card p.card-title {
+    padding: 1.5rem 2.5rem 0 2.5rem;
+    border: 0;
+    text-transform: inherit;
+}
+
+.profile-page-container div.card p.card-text {
+    padding: 0 2.5rem 1.5rem 2.5rem;
+    border: 0;
+    line-height: 1.5;
+    font-size: 1.4rem;
+}
+
+.profile-page-container div.card .card-icon-block .card-text {
+    padding: 0.7rem 0 0 0;
+    font-size: 1.3rem;
+    line-height: 1.3;
+}
+
+.profile-page-container div.card .card-item {
+    padding: 0.3rem 0;
+}
+
+.profile-page-container div.card .card-item .item-text {
+    text-transform: none;
+    font-weight: 400;
+}
+
+.profile-page-container div.card .card-item .item-icon,
+.profile-page-container div.card .card-item .item-text b {
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.profile-page-container div.card .card-block {
+    padding: 1rem 2.5rem;
+}
+
+.profile-page-container div.card .card-block.hide {
+    display: none;
+}
+
+.profile-page-container div.card .card-block,
+.profile-page-container div.card .card-icon-block {
+    border-bottom: 1px solid rgba(221, 221, 221, 0.5);
+}
+
+.profile-page-container div.card .card-block:last-child {
+    border-bottom: 0;
+}
+
+.profile-page-container div.card .card-block p.card-title {
+    padding: 0 0 0.2rem 0;
+}
+
+.profile-page-container div.card li.block-text {
+    margin: 0.3rem 0 0.3rem 1.2rem;
+}
+
+.profile-page-container div.card li.block-text a {
+    color: rgba(0, 0, 0, .5);
+}
+
+.profile-page-container div.card .social-card {
+    text-align: center;
+}
+
+.profile-page-container div.card .social-card .has-tip {
+    cursor: pointer;
+}
+
+.profile-page-container div.card .social-icon {
+    display: inline-block;
+    color: #cccccc;
+    font-weight: 500;
+    font-size: 2rem;
+    text-align: center;
+    margin: 0.5rem 1.3rem;
+    cursor: pointer;
+    position: relative;
+}
+
+.profile-page-container div.card .social-icon.disabled {
+    color: #efefef;
+    cursor: default;
+}
+
+.profile-page-container i.privacy-lock {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.profile-page-container .privacy-text {
+    display: inline-block;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.profile-page-container .profile-page-header {
+    height: 28rem;
+    background-size: cover;
+    background: no-repeat center center;
+    position: relative;
+}
+
+.profile-page-container .profile-page-map-container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+}
+
+.profile-page-container .profile-page-map {
+    height: 100%;
+}
+
+.profile-page-container .profile-page-map-label {
+    color: #FFFFFF;
+    font-weight: 400;
+    font-size: 1.4rem;
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    top: 52%;
+    text-align: center;
+}
+
+.profile-page-container .profile-header-wrapper {
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    top: 0;
+    height: 28rem;
+    z-index: 2;
+    background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 50%, rgb(0, 0, 0) 100%);
+}
+
+.profile-page-container .profile-header-container {
+    position: relative;
+    display: table;
+    height: 28rem;
+    margin: auto;
+}
+
+.profile-page-container .profile-info-container {
+    display: table;
+    position: absolute;
+    bottom: 0;
+}
+
+.profile-page-container .profile-photo-block {
+    height: 17rem;
+    width: 17rem;
+    display: table-cell;
+    vertical-align: bottom;
+    transform-style: preserve-3d;
+    border-radius: 0.3rem;
+    border: 1px solid #ffffff;
+    transition: all 0.5s ease-out;
+    backface-visibility: hidden;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    bottom: -2rem;
+}
+
+.profile-page-container .profile-name-class-container {
+    color: #ffffff;
+    letter-spacing: 0;
+    font-weight: 700;
+    display: table-cell;
+    vertical-align: bottom;
+    padding: 0 1rem 1rem 1rem;
+}
+
+.profile-page-container .profile-name-block {
+    display: inline-block;
+    line-height: 1;
+    font-size: 2.2rem;
+}
+
+.profile-page-container .profile-name {
+    float: left;
+    line-height: 1.3;
+    font-weight: 500;
+}
+
+.profile-page-container .profile-class-block {
+    display: block;
+    margin-top: -0.5rem;
+    position: relative;
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+
+.profile-page-container .profile-registered-tick {
+    position: absolute;
+    top: 0.5rem;
+    left: 0.5rem;
+    color: #ffffff;
+    display: inline-block;
+}
+
+/* Profile deceased badge */
+
+.profile-page-container .profile-deceased-badge {
+    position: absolute;
+    top: 0.5rem;
+    left: 0.5rem;
+    color: #ffffff;
+    display: table;
+    line-height: 1;
+    background-color: rgba(0,0,0,0.4);
+    padding: 0 1.5rem 0 0;
+    border-radius: 1.5rem;
+}
+
+.profile-page-container .profile-deceased-badge i {
+    padding: 0.5rem 0.7rem;
+    font-size: 1.8rem;
+    border-radius: 50%;
+    background-color: #7ED321;
+}
+
+.profile-page-container .profile-deceased-badge span {
+    font-size: 1.3rem;
+    font-weight: 500;
+    display: table-cell;
+    vertical-align: middle;
+    padding-left: 0.5rem;
+}
+
+.profile-page-container .profile-initials {
+    text-align: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    margin-top: -1.5rem;
+    z-index: 1;
+    color: #FFFFFF;
+    font-size: 2.4rem;
+    line-height: 3rem;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.profile-page-container .profile-header-contact {
+    position: absolute;
+    right: 0;
+    bottom: 1.2rem;
+    text-align: right;
+}
+
+.profile-page-container .invite-user-block {
+    margin-bottom: 1rem;
+    text-align: right;
+}
+
+.profile-page-container .invite-user-block .action-btn {
+    background: #00a651;
+    display: inline-block;
+}
+
+.profile-page-container .invite-user-block .help-tip {
+    color: #FFFFFF;
+    margin-left: 0.5rem;
+}
+
+.profile-page-container .contact-btn {
+    color: #FFFFFF;
+    font-weight: 700;
+    padding: 1rem 2rem;
+    margin-left: 1rem;
+    border-radius: 0.3rem;
+    display: inline-block;
+    min-width: 15rem;
+    text-align: center;
+    position: relative;
+    font-size: 1.3rem;
+    background: rgba(0, 0, 0, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+}
+
+.profile-page-container .contact-btn:not(.disabled):hover {
+    background: #023e58;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.profile-page-container .contact-btn.disabled {
+    cursor: not-allowed;
+    color: rgba(255, 255, 255, 0.3);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.profile-page-container .contact-btn:first-child {
+    margin-right: 1rem;
+}
+
+.profile-page-container .contact-btn .has-tip {
+    margin-left: 0.4rem;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.profile-page-container .profile-page-tabs-container {
+    background: #000000;
+    color: #ffffff;
+    display: block;
+    font-weight: 700;
+    border-top: 1px solid rgba(245, 245, 245, 0.3);
+}
+
+.profile-page-container .profile-page-tabs {
+    position: relative;
+    max-width: 102rem;
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+.profile-page-container .profile-page-tabs span.profile-page-tab {
+    padding: 1rem 2rem;
+    cursor: pointer;
+    display: inline-block;
+    margin: 0 -0.2rem;
+    border-left: 1px solid #403535;
+    position: relative;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.profile-page-container .profile-page-tabs span.profile-page-tab .has-tip {
+    display: inline-block;
+    right: 3px;
+    top: 50%;
+    margin: -1rem 0;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.profile-page-container .profile-page-tabs span.profile-page-tab.active-tab {
+    color: #FFFFFF;
+}
+
+.profile-page-container .profile-page-tabs span.profile-page-tab.active-tab .has-tip {
+    color: #FFFFFF;
+}
+
+.profile-page-container .profile-page-tabs span.profile-page-tab.active-tab:before {
+    content: "\f0d8";
+    font-family: FontAwesome;
+    position: absolute;
+    left: 50%;
+    margin-left: -0.7rem;
+    color: #FFFFFF;
+    bottom: -1.3rem;
+    font-size: 2.4rem;
+}
+
+.profile-page-container .profile-page-tabs span.profile-page-tab:last-of-type {
+    border-right: 1px solid #403535;
+}
+
+.profile-page-container .profile-page-tabs span.profile-page-tab:hover {
+    background: rgb(43, 43, 43);
+    transition: all 0.2s ease-out;
+}
+
+.profile-page-container #deceased-date {
+    padding-bottom: 0.5rem;
+}
+
+#membership-card.card-icon-block {
+    display: table;
+}
+
+#membership-card.card-icon-block p.card-text {
+    padding: 0 0 0 1rem;
+    line-height: 1.2;
+    width: 80%;
+    vertical-align: middle;
+}
+
+#membership-card #membership-expiry-date {
+    display: block;
+}
+
+#membership-card #membership-expiry-date.hide {
+    display: none;
+}
+
+#basic-info-card .item-text,
+#contact-information .item-text {
+    width: 90%;
+}
+
+#contact-information .has-tip {
+    color: rgba(0, 0, 0, 0.6);
+    margin-left: 0.7rem;
+}
+
+#communication-preferences ul {
+    margin-left: 1rem;
+}
+
+#communication-preferences ul li {
+    list-style-type: disc;
+    display: list-item;
+    margin-bottom: 0.4rem;
+}
+
+#mentorship-card {
+    padding: 1rem 0;
+}
+
+#mentorship-card .card-title {
+    padding: 0 2.5rem;
+    font-size: 1.4rem;
+}
+
+#mentorship-card .card-text {
+    padding: 0;
+    line-height: 1.3;
+    font-size: 1.3rem;
+}
+
+#mentorship-card .card-item .button-item-text.item-text {
+    display: block;
+    padding: 0 0 0.5rem 0;
+}
+
+#mentorship-card ul {
+    margin: 1rem 0 1rem 1.5rem;
+}
+
+#mentorship-card ul li {
+    display: list-item;
+    list-style-type: disc;
+}
+
+#mentorship-card .card-item {
+    display: table;
+    width: 100%;
+    padding: 0.5rem 2.5rem 0 2.5rem;
+}
+
+#mentorship-card .card-item.hide {
+    display: none;
+}
+
+#mentorship-card .card-item .card-thumb,
+#mentorship-card .card-item .item-text {
+    display: table-cell;
+    vertical-align: middle;
+    float: none;
+}
+
+#mentorship-card .card-item .item-text {
+    padding: 0 0 0 1rem;
+}
+
+#mentorship-card .card-item .card-title {
+    font-size: 1.3rem;
+}
+
+#mentorship-card .card-item .card-title,
+#mentorship-card .card-item .card-item {
+    padding: 0;
+    border: 0;
+}
+
+#mentorship-card .card-item .card-item {
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+#mentorship-card .item-border {
+    border-bottom: 1px solid rgba(221, 221, 221, 0.5);
+    padding: 2rem 2.5rem 2rem 2.5rem;
+}
+
+#mentorship-card .item-border .card-title,
+#mentorship-card .item-no-border .card-title {
+    margin-bottom: 1rem;
+}
+
+#mentorship-card .item-border:last-child {
+    border: none;
+    padding-bottom: 0;
+}
+
+#mentorship-card .action-btn {
+    background: #00a651;
+    display: inline-block;
+    width: 100%;
+}
+
+#mentorship-card .conversation-item {
+    margin-bottom: 0.5rem;
+}
+
+#mentorship-card .conversation-item .card-icon {
+    display: inline-block;
+    float: left;
+}
+
+#mentorship-card .conversation-item .item-text {
+    padding: 0 0 0 0.7rem;
+}
+
+#mentorship-card .conversation-item .has-tip {
+    margin-left: 0.2rem;
+}
+
+#engagement-snapshot-loader {
+    display: table;
+    margin: 0 auto 3.5rem auto;
+}
+
+#engagement-snapshot-block-clone {
+    display: none;
+}
+
+#engagement-snapshot-empty {
+    color: rgba(0, 0, 0, 0.2);
+    font-weight: 700;
+}
+
+#engagement-snapshot-container .card-title {
+    margin-bottom: 1.5rem;
+}
+
+#engagement-snapshot-container .engagement-snapshot-block {
+    border-right: 3px solid rgba(0, 0, 0, .05);
+}
+
+#engagement-snapshot-container .engagement-snapshot-block:last-child {
+    border-right: none;
+}
+
+#engagement-snapshot-container .engagement-snapshot-block-title {
+    font-weight: 700;
+    color: rgba(0, 0, 0, 0.5);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    text-transform: capitalize;
+}
+
+#engagement-snapshot-container .engagement-snapshot-item {
+    margin-bottom: 1.5rem;
+}
+
+#engagement-snapshot-container p.engagement-snapshot-item-title {
+    line-height: 1;
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+
+#engagement-snapshot-container span.engagement-snapshot-item-text {
+    text-transform: capitalize;
+    color: rgba(0, 0, 0, .4);
+    padding: 0;
+    font-size: 1.1rem;
+    font-weight: 300;
+}
+
+#engagement-snapshot-container #engagement-snapshot-more-handler {
+    text-align: center;
+    font-size: 1.1rem;
+    color: rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    display: none;
+}
+
+#engagement-snapshot-container #engagement-snapshot-more-handler:hover {
+    text-decoration: underline;
+}
+
+#social-sync-block,
+#re-actions-block {
+    position: relative;
+    display: table;
+}
+
+@media only screen and (max-width: 64em) {
+    #re-actions-block {
+        display: none;
+    }
+}
+
+#social-sync-block .profile-action-btn-block,
+#re-actions-block .profile-action-btn-block {
+    display: inline-block;
+    margin: 0 0.4rem 0 0;
+}
+
+#social-sync-block .card-block,
+#re-actions-block .card-block {
+    border: 0;
+    padding: 1rem 2rem;
+    display: table-cell;
+    vertical-align: middle;
+    float: none;
+}
+
+#social-sync-block .card-title,
+#re-actions-block .card-title {
+    font-size: 1.5rem;
+    color: #cccccc;
+    letter-spacing: 0;
+    padding: 0;
+    line-height: 1.2;
+    margin-bottom: 0.8rem;
+}
+
+#social-sync-block .card-text,
+#re-actions-block .card-text {
+    padding: 0.1rem 0;
+    font-size: 1.2rem;
+    margin: 0 0 0.3rem 0;
+    font-weight: 500;
+}
+
+#social-sync-block .card-block.large-6 {
+    width: 50%;
+}
+
+#social-sync-block .card-block.large-6:first-child {
+    padding-right: 0;
+}
+
+#social-sync-block .card-block.large-6:last-child {
+    padding-left: 0;
+}
+
+#re-actions-block .card-block:first-child {
+    width: 25%;
+}
+
+#social-sync-block .card-block.large-12 {
+    width: 100%;
+}
+
+#re-actions-block .card-block:last-child {
+    width: 75%;
+    text-align: right;
+}
+
+#social-sync-block #profile-actions-container,
+#re-actions-block #profile-actions-container {
+    text-align: right;
+}
+
+#social-sync-block .progress {
+    height: 0.4625rem;
+    margin: 0;
+    padding: 0;
+    border-radius: 1rem;
+}
+
+#social-sync-block .meter {
+    border-radius: 1rem;
+}
+
+#social-sync-block .action-btn,
+#re-actions-block .action-btn {
+    background: #00a651;
+    display: inline-block;
+}
+
+#social-sync-block .has-tip {
+    position: absolute;
+    top: 2rem;
+    right: 1rem;
+    color: #9e9b9b;
+}
+
+#social-sync-block #synced-text {
+    font-size: 1rem;
+    position: absolute;
+    bottom: 0;
+    right: 2.7rem;
+}
+
+#re-actions-block .profile-action-btn-block,
+#re-actions-block .action-btn:last-child {
+    margin: 0;
+}
+
+.profile-page-container .sync-btn-handler.rotating .btn-icon {
+    -webkit-animation: rotating 2s linear infinite;
+    -moz-animation: rotating 2s linear infinite;
+    -o-animation: rotating 2s linear infinite;
+    animation: rotating 2s linear infinite;
+}
+
+@-webkit-keyframes rotating /* Safari and Chrome */
+{
+    from {
+        -ms-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    to {
+        -ms-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotating {
+    from {
+        -ms-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    to {
+        -ms-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+#re-actions-block  .action-btn {
+    margin-right: 1rem;
+    display: inline-block;
+}
+
+#user-info-block {
+    border: 0;
+    position: relative;
+    padding: 2.5rem;
+}
+
+#user-info-block .card-block {
+    padding: 0;
+    margin-top: 0.5rem;
+}
+
+#user-info-block .card-item .card-block .card-text {
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+#user-info-block .picture-container {
+    float: left;
+    width: 7rem;
+    margin-right: 1rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 7rem;
+    border-radius: 0.5rem;
+    position: relative;
+}
+
+#user-info-block .picture-container .profile-initials {
+    font-size: 1.5rem;
+    margin: -1.2rem;
+}
+
+#user-info-block .education-college-name {
+    font-size: 1.5rem;
+}
+
+#user-info-block .card-text-container {
+    padding-left: 0.5rem;
+}
+
+#user-info-block .card-item {
+    padding: 0.5rem 0 1.5rem 0;
+}
+
+#user-info-block .card-item:first-child {
+    padding: 0 0 0.5rem 0;
+}
+
+#user-info-block .card-item:last-child {
+    padding: 0.5rem 0 0 0;
+}
+
+#user-info-block .card-item .education-college-name {
+    padding-bottom: 0.5rem;
+}
+
+#user-info-block .card-item .card-text {
+    padding: 0;
+    display: block;
+    line-height: 1;
+    margin-bottom: 0.4rem;
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+#user-info-block .card-link {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+#similar-tab-container,
+#root {
+    min-height: 60rem;
+    display: table;
+}
+
+#similar-tab-container.hide,
+#root.hide {
+    display: none;
+}
+
+#similar-tab-container [data-block="similar-tabs"] .card {
+    padding: 0;
+}
+
+#similar-tab-container [data-block="similar-tabs"] .card-block {
+    padding: 0;
+    display: table;
+    width: 100.3%;
+}
+
+#similar-tab-container [data-block="similar-tabs"] .card-item {
+    padding: 1rem 3rem;
+    margin: 0;
+    display: table;
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+#similar-tab-container [data-block="similar-tabs"] .card-item.active .item-text,
+#similar-tab-container [data-block="similar-tabs"] .card-item.active .item-icon i {
+    font-weight: 500;
+}
+
+#similar-tab-container [data-block="similar-tabs"] .card-item .item-count {
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 1.2rem;
+    display: block;
+}
+
+#similar-tab-container [data-block="similar-tabs"] .item-icon {
+    margin-top: -0.1rem;
+}
+
+#similar-tab-container [data-block="similar-tabs"] .item-icon i {
+    font-size: 1.3rem;
+}
+
+#similar-tab-container [data-block="similar-tabs"] .item-text {
+    color: rgba(0, 0, 0, 0.6);
+    width: 90%;
+}
+
+#similar-results-container {
+    padding: 0;
+    background-color: transparent;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    -o-box-shadow: none;
+}
+
+#similar-results-container .card-block {
+    border: 0;
+    padding: 0 1rem;
+}
+
+#similar-results-container .card-block.hide {
+    display: none;
+}
+
+#similar-results-container .column.large-4 {
+    float: left;
+    padding: 0;
+    width: 15rem;
+    margin-bottom: 1.7rem;
+    margin-right: 1.5rem;
+}
+
+#similar-results-container .card-block .column.large-4:nth-of-type(4n) {
+    margin-right: 0;
+}
+
+#similar-results-container .profile_block {
+    position: relative;
+}
+
+@media only screen and (min-width: 64em) {
+    #similar-results-container .profile_block {
+        width: 14.8rem;
+    }
+}
+
+@media only screen and (max-width: 64em) {
+    #similar-results-container .profile_block {
+        max-width: 29.6rem;
+    }
+}
+
+
+/** Anonymous Card **/
+
+#profile-view-page #profile_card_container {
+    padding: 5rem 0;
+    background: #f5f5f5;
+    height: 17rem;
+}
+
+#profile-view-page #profile_card_container .profile_block {
+    margin: 0 auto;
+    float: none;
+    width: 100%;
+    max-width: 30rem;
+    height: 15rem;
+}
+
+#profile-view-page .page_login_required {
+    margin-top: 3.5rem;
+}
+
+#profile-view-page .page_login_required div.btn {
+    margin-top: 1.4rem;
+}
+
+#profile-view-page .page_login_required .login_required_why {
+    margin: 3.5rem auto;
+}
+
+#profile-view-page .wrap-text {
+    word-wrap: break-word;
+}
+
+
+@media only screen and (max-width: 64.063em) {
+
+    .profile-page-container .mobile-view-block {
+        display: block;
+    }
+
+    .profile-page-container .desktop-view-block,
+    #social-sync-block #profile-actions-container {
+        display: none;
+    }
+
+    .profile-page-container .action-btn,
+    #mentorship-card .action-btn {
+        width: 20rem;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .invite-overlay div.action-btn {
+        display: inline-block;
+        min-width: 8rem;
+        width: 8rem;
+    }
+
+    .profile-page-container .profile-page-header {
+        background-color: #000000;
+        text-align: center;
+        z-index: 100;
+        height: 50rem;
+        position: relative;
+        padding: 0;
+    }
+
+    .profile-page-container .mobile-view-block {
+        margin: 0 0 2rem 0;
+    }
+
+    .profile-page-container .mobile-view-block .card-text {
+        color: #ffffff;
+        font-size: 1.2rem;
+        font-weight: 500;
+    }
+
+    .profile-page-container .profile-page-map-container {
+        height: 20rem;
+        position: absolute;
+        top: 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .profile-page-container .profile-page-map-label {
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        top: 10rem;
+    }
+
+    /* Hiding google logo and terms text from google map */
+    .profile-page-container .profile-page-map-container .gmnoprint,
+    .profile-page-container .profile-page-map-container .gm-style a,
+    .profile-page-container .profile-page-map-container .gm-fullscreen-control {
+        display: none !important;
+    }
+
+    .profile-page-container .profile-header-wrapper {
+        position: absolute;
+        float: none;
+        clear: both;
+        top: auto;
+        bottom: 0;
+        height: auto;
+    }
+
+    .profile-page-container .profile-header-container {
+        height: auto;
+    }
+
+    .profile-page-container .profile-info-container {
+        position: relative;
+    }
+
+    .profile-page-container .profile-photo-block {
+        display: block;
+        float: none;
+        clear: both;
+        margin: 0 auto 2rem auto;
+        bottom: 0;
+        height: 13rem;
+        width: 13rem;
+    }
+
+    .profile-page-container .profile-name-class-container {
+        margin: 0;
+        padding: 0;
+        display: block;
+        float: none;
+        clear: both;
+    }
+
+    .profile-page-container .profile-name {
+        font-size: 1.8rem;
+        float: none;
+        clear: both;
+    }
+
+    .profile-page-container .profile-class-block {
+        margin: 0;
+        float: none;
+        clear: both;
+    }
+
+    #mobile-actions {
+        color: #ffffff;
+        font-weight: 500;
+        margin: 2rem 0;
+        padding: 1rem 0;
+        background-image: -moz-linear-gradient(0deg, rgb(0, 0, 0) 0%, rgb(0, 64, 99) 47%, rgb(0, 0, 0) 100%);
+        background-image: -webkit-linear-gradient(0deg, rgb(0, 0, 0) 0%, rgb(0, 64, 99) 47%, rgb(0, 0, 0) 100%);
+        background-image: -ms-linear-gradient(0deg, rgb(0, 0, 0) 0%, rgb(0, 64, 99) 47%, rgb(0, 0, 0) 100%);
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    #mobile-actions .mobile-action-item {
+        display: inline-table;
+        width: 6rem;
+        height: 6rem;
+        margin: 0 0.2rem;
+        text-align: center;
+        cursor: pointer;
+        padding: 0.4rem;
+        position: relative;
+    }
+
+    #mobile-actions .mobile-action-item-icon {
+        margin-bottom: 0.3rem;
+    }
+
+    #mobile-actions .mobile-action-item-text {
+        line-height: 1.2;
+        display: block;
+        font-size: 1.2rem;
+        -webkit-touch-callout: none; /* iOS Safari */
+        -webkit-user-select: none; /* Safari */
+        -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+        user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
+    }
+

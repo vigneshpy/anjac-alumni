@@ -1,0 +1,1351 @@
+/******************** 
+    BUTTONS CSS  
+********************/
+
+/* 
+ * We have mainly four types of buttons depend on the behavior of action
+ */
+
+/* 
+ * BASIC BUTTON CSS   
+ * This CSS is applied to all type of buttons
+ */
+
+div.action-btn {
+    position: relative;
+    display: table;
+    padding: 1rem 1.6rem;
+    min-width: 10rem;
+    min-height: 3.2rem;
+    border-radius: 0.3rem;
+    color: #ffffff;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 1.4rem;
+    line-height: 1;
+    cursor: pointer;
+    transition: box-shadow 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+    -webkit-transition: box-shadow 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+    -moz-transition: box-shadow 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+    -ms-transition: box-shadow 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+    -o-transition: box-shadow 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+div.action-btn:hover {
+    transition: box-shadow 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+    -webkit-transition: box-shadow 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+    -moz-transition: box-shadow 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+    -ms-transition: box-shadow 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+    -o-transition: box-shadow 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+div.action-btn span.btn-body {
+    display: inline-block;
+    padding: 0;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 1.2rem;
+    position: relative;
+}
+
+div.action-btn > a {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+div.action-btn span.btn-body.icon:before {
+    font-family: 'FontAwesome';
+    position: absolute;
+    top: -0.1rem;
+    padding: 0;
+    font-size: 1.2rem;
+}
+
+div.action-btn span.btn-body.left-icon:before {
+    content: "\f0d9";
+    left: -1.5rem;
+}
+
+div.action-btn span.btn-body.right-icon:before {
+    content: "\f0da";
+    right: -1.5rem;
+}
+
+/* 
+ * COLOR BUTTON CSS 
+ */
+
+div.color-btn {
+    background: #00a3d3; /* Button Color Variable */
+}
+
+div.color-btn:hover,
+div.delete-btn:hover {
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.35);
+    -webkit-box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.35);
+    -moz-box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.35);
+    -ms-box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.35);
+    -o-box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.35);
+}
+
+div.color-btn:active {
+    background: #000000; /* Primary Color Dark */
+}
+
+/* 
+ * DELETE BUTTON CSS 
+ */
+
+div.delete-btn {
+    background: #D32700;
+}
+
+/* 
+ * TEXT BUTTON CSS 
+ */
+
+div.text-btn {
+    border-radius: 0;
+    background: white;
+    color: #00a3d3;
+}
+
+div.text-btn:hover {
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
+    -ms-box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
+    -o-box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
+}
+
+div.text-btn:active {
+    background: #f5f5f5;
+}
+
+/* 
+ * RAISED BUTTON CSS 
+ */
+
+div.raised-btn {
+    background: #ffffff;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.3);
+    -ms-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.3);
+    -o-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.3);
+    color: #00a3d3;
+}
+
+div.raised-btn:hover {
+    background: #ffffff;
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.3);
+    -ms-box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.3);
+    -o-box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+    -webkit-transition: box-shadow 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+    -moz-transition: box-shadow 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+    -ms-transition: box-shadow 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+    -o-transition: box-shadow 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+div.raised-btn:active {
+    background: #fff;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.3);
+    -ms-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.3);
+    -o-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+    -webkit-transition: box-shadow 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+    -moz-transition: box-shadow 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+    -ms-transition: box-shadow 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+    -o-transition: box-shadow 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* 
+ * DISABLED BUTTON CSS 
+ */
+
+div.action-btn.disabled-btn {
+    background: #e9e9e9;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    -ms-box-shadow: none;
+    -o-box-shadow: none;
+    color: #b5b5b5;
+    cursor: default;
+    transition: none;
+    -webkit-transition: none;
+    -moz-transition: none;
+    -ms-transition: none;
+    -o-transition: none;
+}
+
+div.action-btn.color-btn.disabled-btn {
+    background: #e9e9e9;
+}
+
+div.action-btn.disabled-btn:hover {
+    box-shadow: none;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    -ms-box-shadow: none;
+    -o-box-shadow: none;
+    transition: none;
+    -webkit-transition: none;
+    -moz-transition: none;
+    -ms-transition: none;
+    -o-transition: none;
+}
+
+/* 
+ * TEXT LINK CSS 
+ */
+
+a.text-link {
+    display: block;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+a.text-link .link-icon {
+    margin-top: 0.2rem;
+}
+
+a.text-link .link-icon.left {
+    margin-right: 0.5rem;
+}
+
+a.text-link .link-icon.right {
+    margin-left: 0.5rem;
+}
+
+a.text-link:hover {
+    text-decoration: underline;
+}
+
+/* 
+ * TOOLTIP CSS 
+ */
+
+div.tooltip {
+    padding: 1.7rem 2rem 2rem 2rem;
+    max-width: 25rem;
+    border-radius: 0.3rem;
+    background: rgba(0, 0, 0, 0.85);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+    -ms-box-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+    -o-box-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+}
+
+p.tooltip-title {
+    margin-bottom: 0.8rem;
+    font-weight: 500;
+}
+
+div.tooltip span {
+    font-size: 1.1rem;
+}
+
+span.tooltip-action {
+    position: absolute;
+    color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+/******************* 
+    LOADER CSS 
+*******************/
+
+/*
+ * Loader is used while fetching data from the database or some query, process which
+ * is quite long so we will append the loader in that place.
+ */
+
+ul.loading {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 0;
+}
+
+ul.loading.hide {
+    display: none;
+}
+
+ul.loading li {
+    margin: 0.4rem 0.4rem 0.1rem 0.4rem;
+    width: 0.7rem;
+    height: 0.7rem;
+    float: left;
+    border: 0.1rem solid #2b8ccd; /* Primary Color */
+    border-radius: 100%;
+    transform: transformZ(0);
+    -webkit-transform: transformZ(0);
+    -moz-transform: transformZ(0);
+    -ms-transform: transformZ(0);
+    -o-transform: transformZ(0);
+    animation: loadingKeyframe 1s infinite;
+    -webkit-animation: loadingKeyframe 1s infinite;
+    -moz-animation: loadingKeyframe 1s infinite;
+    -ms-animation: loadingKeyframe 1s infinite;
+    -o-animation: loadingKeyframe 1s infinite;
+}
+
+ul.loading.reversed li {
+    margin: 0.1rem 0.5rem 0.1rem 0.4rem;
+    border: 0.1rem solid #ffffff;
+    animation: loadingReverseKeyframe 1s infinite;
+    -webkit-animation: loadingReverseKeyframe 1s infinite;
+    -moz-animation: loadingReverseKeyframe 1s infinite;
+    -ms-animation: loadingReverseKeyframe 1s infinite;
+    -o-animation: loadingReverseKeyframe 1s infinite;
+}
+
+ul.loading li:nth-child(1n) {
+    left: -1.7rem;
+    -webkit-animation-delay: 0s;
+    animation-delay: 0s;
+}
+
+ul.loading li:nth-child(2n) {
+    left: 0;
+    -webkit-animation-delay: 0.2s;
+    animation-delay: 0.2s;
+}
+
+ul.loading li:nth-child(3n) {
+    left: 1.7rem;
+    -webkit-animation-delay: 0.4s;
+    animation-delay: 0.4s;
+}
+
+@-webkit-keyframes loadingKeyframe {
+    0% {
+        background: #2b8ccd; /* Button Color */
+        -webkit-transform: scale(0.7);
+        transform: scale(0.7);
+    }
+    50% {
+        background: #ffffff;
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+    100% {
+        background: #2b8ccd; /* Button Color */
+        -webkit-transform: scale(0.7);
+        transform: scale(0.7);
+    }
+}
+
+@keyframes loadingKeyframe {
+    0% {
+        background: #2b8ccd; /* Button Color */
+        -webkit-transform: scale(0.7);
+        transform: scale(0.7);
+    }
+    50% {
+        background: #ffffff;
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+    100% {
+        background: #2b8ccd; /* Button Color */
+        -webkit-transform: scale(0.7);
+        transform: scale(0.7);
+    }
+}
+
+@-webkit-keyframes loadingReverseKeyframe {
+    0% {
+        background: #ffffff;
+        -webkit-transform: scale(0.7);
+        transform: scale(0.7);
+    }
+    50% {
+        background: #00a3d3; /* Button Color */
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+    100% {
+        background: #ffffff;
+        -webkit-transform: scale(0.7);
+        transform: scale(0.7);
+    }
+}
+
+@keyframes loadingReverseKeyframe {
+    0% {
+        background: #ffffff;
+        -webkit-transform: scale(0.7);
+        transform: scale(0.7);
+    }
+    50% {
+        background: #00a3d3; /* Button Color */
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+    100% {
+        background: #ffffff;
+        -webkit-transform: scale(0.7);
+        transform: scale(0.7);
+    }
+}
+
+/* NOTIFICATION BOX CSS */
+/*
+ * This is used for showing all success and failure response.
+ * For showing success response we have to add class "success" with notification-box
+ * For showing failure response we have to add class "failure" with notification-box
+ */
+
+div.notification-box {
+    position: fixed;
+    bottom: 3rem;
+    left: 3rem;
+    z-index: 1000;
+    max-width: 30rem;
+    border-radius: 0.5rem;
+    background: #ffffff;
+    box-shadow: 0 5px 21.3px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0 5px 21.3px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 5px 21.3px rgba(0, 0, 0, 0.2);
+    -ms-box-shadow: 0 5px 21.3px rgba(0, 0, 0, 0.2);
+    -o-box-shadow: 0 5px 21.3px rgba(0, 0, 0, 0.2);
+    color: rgba(0, 0, 0, 0.7);
+    line-height: 1.4;
+}
+
+div.notification-box.hide {
+    display: none;
+}
+
+div.notification-box-icon {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 6rem;
+    height: 100%;
+    border-radius: 0.4rem 0 0 0.4rem;
+    color: #ffffff;
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+div.notification-box-inner {
+    display: inline-block;
+    margin-left: 6rem;
+    padding: 2.2rem 0 2.2rem 1.5rem;
+    width: 27rem;
+}
+
+div.notification-box-inner p {
+    margin-right: 6rem;
+    font-weight: 300;
+}
+
+div.notification-box.success .notification-box-icon {
+    background: #49b77b;
+}
+
+div.notification-box.failure .notification-box-icon {
+    background: #b75555;
+}
+
+div.notification-box.failure .notification-box-icon:after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -0.9rem;
+    width: 1.8rem;
+    content: "\f12a";
+    font-family: FontAwesome;
+}
+
+div.notification-box.success .notification-box-icon:after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -0.9rem;
+    width: 1.8rem;
+    content: "\f00c";
+    font-family: FontAwesome;
+}
+
+div.notification-box-close {
+    position: absolute;
+    top: 0.6rem;
+    right: 0.6rem;
+    padding: 0.6rem 0.6rem 0.6rem 0.7rem;
+    border-radius: 100%;
+    color: rgba(0, 0, 0, 0.2);
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background 0.1s ease;
+    -webkit-transition: background 0.1s ease;
+    -moz-transition: background 0.1s ease;
+    -ms-transition: background 0.1s ease;
+    -o-transition: background 0.1s ease;
+}
+
+div.notification-box-close:hover {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+/*********************
+    CHECKBOX CSS
+**********************/
+
+/*
+ * Checkbox with different style like switch. which has two states ON and OFF
+ */
+
+input[type="checkbox"].switch {
+    display: none;
+}
+
+input[type="checkbox"].switch,
+input[type="checkbox"].switch:after,
+input[type="checkbox"].switch:before,
+input[type="checkbox"].switch *,
+input[type="checkbox"].switch *:after,
+input[type="checkbox"].switch *:before {
+    box-sizing: border-box;
+}
+
+input[type="checkbox"].switch::-moz-selection,
+input[type="checkbox"].switch:after::-moz-selection,
+input[type="checkbox"].switch:before::-moz-selection,
+input[type="checkbox"].switch *::-moz-selection,
+input[type="checkbox"].switch *:after::-moz-selection,
+input[type="checkbox"].switch *:before::-moz-selection,
+input[type="checkbox"].switch + label.switch-label::-moz-selection {
+    background: transparent;
+}
+
+input[type="checkbox"].switch::selection,
+input[type="checkbox"].switch:after::selection,
+input[type="checkbox"].switch:before::selection,
+input[type="checkbox"].switch *::selection,
+input[type="checkbox"].switch *:after::selection,
+input[type="checkbox"].switch *:before::selection,
+input[type="checkbox"].switch + label.switch-label::selection {
+    background: transparent;
+}
+
+input[type="checkbox"].switch + label.switch-label {
+    position: relative;
+    display: block;
+    width: 3em;
+    height: 1.6em;
+    outline: 0;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+input[type="checkbox"].switch + label.switch-label:after,
+input[type="checkbox"].switch + label.switch-label:before {
+    position: relative;
+    display: block;
+    width: 50%;
+    height: 100%;
+    content: "";
+}
+
+input[type="checkbox"].switch + label.switch-label:after {
+    left: 0;
+}
+
+input[type="checkbox"].switch + label.switch-label:before {
+    display: none;
+}
+
+input[type="checkbox"].switch:checked + label.switch-label:after {
+    left: 50%;
+}
+
+input[type="checkbox"].switch + label.switch-label {
+    padding: 2px;
+    border: none;
+    border-radius: 2em;
+    background: rgba(0, 0, 0, 0.1);
+    transition: all .4s ease;
+    -webkit-transition: all .4s ease;
+    -moz-transition: all .4s ease;
+    -ms-transition: all .4s ease;
+    -o-transition: all .4s ease;
+}
+
+input[type="checkbox"].switch + label.switch-label:after {
+    border-radius: 2em;
+    background: #fbfbfb;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), 0 4px 0 rgba(0, 0, 0, 0.08);
+    -webkit-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), 0 4px 0 rgba(0, 0, 0, 0.08);
+    -moz-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), 0 4px 0 rgba(0, 0, 0, 0.08);
+    -ms-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), 0 4px 0 rgba(0, 0, 0, 0.08);
+    -o-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), 0 4px 0 rgba(0, 0, 0, 0.08);
+    transition: left 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), padding 0.3s ease, margin 0.3s ease;
+    -webkit-transition: left 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), padding 0.3s ease, margin 0.3s ease;
+    -moz-transition: left 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), padding 0.3s ease, margin 0.3s ease;
+    -ms-transition: left 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), padding 0.3s ease, margin 0.3s ease;
+    -o-transition: left 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), padding 0.3s ease, margin 0.3s ease;
+}
+
+input[type="checkbox"].switch + label.switch-label:hover:after {
+    will-change: padding;
+}
+
+input[type="checkbox"].switch + label.switch-label:active {
+    box-shadow: inset 0 0 0 2em #e8eae9;
+    -webkit-box-shadow: inset 0 0 0 2em #e8eae9;
+    -moz-box-shadow: inset 0 0 0 2em #e8eae9;
+    -ms-box-shadow: inset 0 0 0 2em #e8eae9;
+    -o-box-shadow: inset 0 0 0 2em #e8eae9;
+}
+
+input[type="checkbox"].switch + label.switch-label:active:after {
+    padding-right: .8em;
+}
+
+input[type="checkbox"].switch:checked + label.switch-label {
+    background: #86d993;
+}
+
+input[type="checkbox"].switch:checked + label.switch-label:active {
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    -ms-box-shadow: none;
+    -o-box-shadow: none;
+}
+
+input[type="checkbox"].switch:checked + label.switch-label:active:after {
+    margin-left: -.8em;
+}
+
+/*********************
+    COMMON CSS
+**********************/
+
+a.hyperlink {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/*********************
+    CARDS CSS
+**********************/
+
+/*
+ * Different types of cards which are using across the product and all cards are inherited from card class.
+ * # Form Card: Card which is used for form and its elements;
+ * # Form Action Card: Card which is used for form actions like submit,close;
+ * # Admin Control Card: Card which is used for admin actions like edit;
+ * # Gallery Card: Card which is used for showing the thumbnails of gallery either in round shape or square shape;
+ *  @Default: Square;
+ *  @Round: round;
+ * # Social Card: Card which is used for social links;
+ *  @Facebook: facebook;
+ *  @Linkedin: linkedin;
+ *  @Twitter: twitter;
+ */
+
+div.card {
+    background-color: #ffffff;
+    padding: 0;
+    border-radius: 0.4rem;
+    box-shadow: 1px 1px 1px 1px #E4E4E4;
+    margin: 2rem 0;
+}
+
+div.card .card-icon-block {
+    padding: 1.5rem 2.5rem;
+    display: inline-block;
+    width: 100%;
+    position: relative;
+}
+
+div.card .card-title,
+div.card .card-text {
+    padding: 2rem 3.5rem;
+}
+
+div.card .card-icon-block .card-title,
+div.card .card-icon-block .card-text,
+div.card .card-icon-block .card-text-container {
+    padding: 0;
+    display: table-cell;
+}
+
+div.card .card-title {
+    text-transform: uppercase;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 1.4rem;
+    margin: 0.1rem 0 0.3rem 0;
+    border-bottom: 1px solid #E4E4E4;
+}
+
+div.card .card-text {
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 1.3rem;
+    line-height: 1.7;
+}
+
+div.card img.card-icon {
+    width: 5rem;
+    float: left;
+    margin-right: 1rem;
+}
+
+div.card div.card-thumb {
+    width: 4rem;
+    height: 4rem;
+    float: left;
+    margin-right: 1rem;
+    background-size: cover;
+}
+
+div.card .card-block {
+    padding: 1rem 3.5rem;
+    display: inline-block;
+    width: 100%;
+    position: relative;
+}
+
+div.card .block-title,
+div.card .block-text {
+    border: 0;
+    padding: 0;
+}
+
+div.card .block-icon {
+    position: absolute;
+    left: 1rem;
+    top: 1.2rem;
+    color: rgba(0, 0, 0, 0.2);
+}
+
+div.card li.block-text {
+    display: list-item;
+    list-style-type: disc;
+    margin: 0.3rem 0 0.3rem 3rem;
+}
+
+div.card.accordion-card .accordion-card-title {
+    font-weight: 300;
+    font-size: 1.4rem;
+    padding: 1.5rem 2.5rem;
+    border-bottom: 1px solid #CCCCCC;
+}
+
+div.card.accordion-card .accordion-card-body {
+    padding: 1rem 0;
+}
+
+div.card.accordion-card .accordion-card-body .card-block {
+    border: 0;
+    padding: 1.4rem 2.5rem;
+    text-transform: capitalize;
+}
+
+div.card.accordion-card .accordion-card-body .card-block.list-type-block {
+    position: relative;
+    padding: 1rem 4rem;
+}
+
+div.card.accordion-card .accordion-card-body .card-block.list-type-block:before {
+    left: 2.3rem;
+    top: 50%;
+    margin: -0.9rem 0;
+    content: '\f111';
+    position: absolute;
+    font-size: 0.5rem;
+    color: #cccccc;
+    font-family: FontAwesome;
+}
+
+div.card.accordion-card .accordion-card-body .card-block p.card-title {
+    font-size: 1.5rem;
+    line-height: 1;
+    font-weight: 500;
+}
+
+div.card.accordion-card .accordion-card-body .card-block p.card-text {
+    padding: 0;
+    line-height: 1;
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+}
+
+div.card.accordion-card .accordion-card-body .card-block p.card-title .card-link {
+    color: rgba(0, 0, 0, 0.6);
+    line-height: 1.3;
+}
+
+div.card.accordion-card .accordion-card-body .card-block p.card-text .card-link {
+    color: rgba(0, 0, 0, 0.5);
+    line-height: 1.3;
+}
+
+div.card.accordion-card .accordion-card-body .card-block p.card-text:last-child {
+    margin-bottom: 0;
+}
+
+div.card.accordion-card .accordion-card-body .card-block p.card-text span.card-link-separator:last-child {
+    display: none;
+}
+
+div.card.accordion-card .accordion-card-body .empty-card-block {
+    color: rgba(0, 0, 0, 0.5);
+    padding: 1rem 2.5rem;
+    font-size: 1.4rem;
+}
+
+div.card.accordion-card .accordion-card-body .empty-card-block a {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+div.card .photo {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    width: 3rem;
+    height: 3rem;
+    margin: 0.4rem 0.6rem 0.4rem 0;
+    float: left;
+    position: relative;
+}
+
+div.card .photo.round {
+    border-radius: 50%;
+}
+
+div.card .card-icon.curve,
+div.card .card-thumb.curve {
+    border-radius: 0.5rem;
+}
+
+div.card .card-item {
+    padding: 0.5rem 0;
+    display: inline-block;
+    width: 100%;
+}
+
+div.card .card-item .item-icon {
+    width: 2.5rem;
+    display: block;
+    float: left;
+}
+
+div.card .card-item .item-icon i {
+    font-size: 1.5rem;
+}
+
+div.card .card-item .item-text {
+    float: left;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-top: -0.1rem;
+    position: relative;
+}
+
+div.card .card-item a {
+    color: inherit;
+}
+
+div.card .card-item .item-text .item-link {
+    color: rgba(0, 0, 0, 0.6);
+}
+
+div.card.contact-card .contact-item {
+    margin: 1rem 0;
+    padding: 0;
+    float: left;
+}
+
+div.card.contact-card .contact-details-block {
+    display: inline-block;
+}
+
+div.card.contact-card .contact-details-block .contact-name {
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 1.4rem;
+    margin: 0.5rem 0 0.5rem 0;
+}
+
+div.card.contact-card .contact-details-block .card-item {
+    color: #702067; /* Primary Color */
+    padding: 0.1rem 0;
+    position: relative;
+}
+
+div.card.form-card {
+    padding-bottom: 3rem;
+    margin-top: 0;
+}
+
+div.card.form-action-card {
+    margin-top: 0;
+    background-color: transparent;
+    box-shadow: none;
+}
+
+div.card.form-action-card .action-btn {
+    display: inline-block;
+    margin-left: 1.5rem;
+}
+
+div.card.admin-control-card {
+    padding: 1rem 2rem 2rem 2rem;
+    color: #702067; /* Primary Color */
+}
+
+div.card.admin-control-card .card-title {
+    padding: 0.7rem 0;
+    border: 0;
+}
+
+div.card.admin-control-card .item-text {
+    cursor: pointer;
+    border-bottom: 1px solid #ffffff;
+}
+
+div.card.admin-control-card .item-text:hover {
+    border-bottom-style: dotted;
+}
+
+div.card.gallery-card .card-block {
+    padding: 1rem 2rem;
+}
+
+div.card.gallery-card .photo:hover {
+    border: 1px solid #ffffff;
+    box-shadow: 0 2px 6px -1px rgba(0, 0, 0, 0.25);
+    -webkit-box-shadow: 0 2px 6px -1px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0 2px 6px -1px rgba(0, 0, 0, 0.25);
+    -o-box-shadow: 0 2px 6px -1px rgba(0, 0, 0, 0.25);
+}
+
+div.card.social-card .social-icon {
+    display: inline-block;
+    background-color: #00a3d3;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 0.5rem 0.3rem;
+    cursor: pointer;
+}
+
+div.card.social-card .social-icon i {
+    line-height: 2;
+}
+
+div.card.social-card .facebook {
+    background-color: #324C6F;
+}
+
+div.card.social-card .linkedin {
+    background-color: #6BBDED;
+}
+
+div.card.social-card .twitter {
+    background-color: #5CB1D6;
+}
+
+div.card.social-card .gplus {
+    background-color: #BF2D3A;
+}
+
+div.tickets-cards-container {
+    background-color: #ffffff;
+    border-radius: 0.6rem;
+    padding: 0;
+    display: inline-block;
+    box-shadow: 0 0 10px -5px #000000;
+}
+
+div.tickets-cards-container .ticket-card {
+    padding: 2rem 0;
+    border-bottom: 1px solid #E4E4E4;
+}
+
+div.tickets-cards-container .ticket-card.header > p {
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 0 2rem;
+    line-height: 1;
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 1.4rem;
+    border: 0;
+    display: inline-block;
+}
+
+div.tickets-cards-container .ticket-card:last-child {
+    border: 0;
+}
+
+div.tickets-cards-container .ticket-card .header-extra {
+    display: inline-block;
+    float: right;
+    position: relative;
+}
+
+div.tickets-cards-container .ticket-card .header-extra .text {
+    text-transform: uppercase;
+    color: #712168; /* Primary Color */
+    font-weight: 500;
+}
+
+div.tickets-cards-container .ticket-card .header-extra .text.edit:before {
+    content: "\f040";
+    font-family: 'FontAwesome';
+    position: absolute;
+    top: 0.1rem;
+    left: -1.5rem;
+    font-size: 1.1rem;
+}
+
+div.tickets-cards-container .ticket-card.in-cart {
+    box-shadow: inset 3px 0 0 #FDD74E;
+    -webkit-box-shadow: inset 3px 0 0 #FDD74E;
+    -moz-box-shadow: inset 3px 0 0 #FDD74E;
+    -ms-box-shadow: inset 3px 0 0 #FDD74E;
+    -o-box-shadow: inset 3px 0 0 #FDD74E;
+}
+
+div.tickets-cards-container .ticket-card .ticket-title,
+div.tickets-cards-container .card-total-item .title,
+div.tickets-cards-container .card-total-item .amount {
+    font-weight: bold;
+    line-height: 1;
+    font-size: 1.4rem;
+    color: rgba(0, 0, 0, 0.6);
+    margin-bottom: 0.6rem;
+}
+
+div.tickets-cards-container .ticket-card .ticket-text {
+    color: rgba(0, 0, 0, 0.5);
+    line-height: 1.3;
+    font-size: 1.25rem;
+}
+
+div.tickets-cards-container .ticket-card .ticket-extra-info {
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 1.25rem;
+    font-style: italic;
+    margin-top: 1rem;
+}
+
+div.tickets-cards-container .ticket-card .sale-date {
+    display: block;
+    font-weight: 500;
+    margin-top: -0.3rem;
+}
+
+div.tickets-cards-container .ticket-card .ticket-info-box,
+div.tickets-cards-container .ticket-card .ticket-price-box {
+    padding: 0 2rem;
+}
+
+div.tickets-cards-container .ticket-card.sold-out .ticket-title,
+div.tickets-cards-container .ticket-card.sold-out .ticket-text,
+div.tickets-cards-container .ticket-card.sold-out .ticket-extra-info,
+div.tickets-cards-container .ticket-card.sold-out .ticket-price-box {
+    color: #cccccc;
+}
+
+div.tickets-cards-container .cart-item {
+    padding: 1.5rem 2rem;
+}
+
+div.tickets-cards-container .ticket-card .ticket-title {
+    display: inline-block;
+    width: 100%;
+}
+
+div.tickets-cards-container .cart-item .item-title {
+    position: relative;
+}
+
+div.tickets-cards-container .cart-item .ticket-remove {
+    right: 0;
+    margin-right: -2rem;
+    font-size: 1.4rem;
+    position: absolute;
+    bottom: 0;
+    color: #CB5150;
+    display: none;
+    cursor: pointer;
+}
+
+div.tickets-cards-container .cart-item:hover .ticket-remove {
+    display: block;
+}
+
+div.tickets-cards-container .cart-item .item-text {
+    display: block;
+    float: none;
+    clear: both;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+div.tickets-cards-container .card-total-item {
+    display: inline-block;
+    width: 100%;
+    padding: 1.5rem 0;
+}
+
+div.tickets-cards-container .card-total-item > p {
+    text-transform: uppercase;
+    font-size: 1.5rem;
+}
+
+div.tickets-cards-container .card-total-item .amount {
+    font-size: 2rem;
+}
+
+div.tickets-cards-container .card-discount-item {
+    display: block;
+    height: 3rem;
+    margin-bottom: 1rem;
+    border: 1px solid #e4e4e4;
+    border-radius: 0.5rem;
+}
+
+div.tickets-cards-container .card-discount-item.applied {
+    border: 0;
+}
+
+div.tickets-cards-container .card-discount-item .input-area {
+    width: 20rem;
+    float: left;
+    height: 3rem;
+    outline: none;
+    padding: 0.5rem;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+div.tickets-cards-container .card-discount-item.applied .input-area {
+    padding: 0;
+    color: rgba(0, 0, 0, 0.5);
+    margin-top: 0.6rem;
+    font-size: 1.4rem;
+    position: relative;
+}
+
+div.tickets-cards-container .card-discount-item .apply-discount-btn {
+    float: right;
+    min-height: auto;
+    min-width: auto;
+    padding: 0.7rem 1.2rem;
+}
+
+div.tickets-cards-container .card-discount-item.applied .discount-edit {
+    display: inline-block;
+    position: absolute;
+    top: 3px;
+    margin-left: 1rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+div.tickets-cards-container .card-discount-item.applied .apply-discount-btn,
+div.tickets-cards-container .card-discount-item .discount-edit,
+div.tickets-cards-container .card-discount-item .amount,
+div.tickets-cards-container .card-discount-item .discount-code {
+    display: none;
+}
+
+div.tickets-cards-container .card-discount-item.applied .amount,
+div.tickets-cards-container .card-discount-item.applied .discount-code {
+    display: block;
+}
+
+div.tickets-cards-container .card-discount-item .discount {
+    color: #00A652;
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+div.tickets-cards-container.cart {
+    width: 100%;
+    padding: 2rem;
+}
+
+div.tickets-cards-container.cart .ticket-card.header {
+    padding: 0 0 2rem 0;
+    border: 0;
+}
+
+div.tickets-cards-container.cart .ticket-card.header > p {
+    padding: 0;
+}
+
+div.tickets-cards-container.cart .cart-item {
+    padding: 1.5rem 0;
+}
+
+div.tickets-cards-container.cart div.forward-btn {
+    float: right;
+}
+
+div.tickets-cards-container .ticket-card .quantity-extra-info {
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 1.25rem;
+    margin-top: 0.8rem;
+}
+
+div.tickets-cards-container .ticket-card .quantity-sold-out {
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    color: #C85250;
+    font-weight: 500;
+}
+
+div.tickets-cards-container .empty-cart-item {
+    text-align: center;
+}
+
+div.tickets-cards-container .empty-cart-item .empty-graphic {
+    display: inline-block;
+    width: 12rem;
+    margin: 2rem 0 1.5rem 0;
+}
+
+div.tickets-cards-container .empty-cart-item .empty-cart-title {
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 1.4rem;
+}
+
+div.tickets-cards-container .empty-cart-item .empty-cart-text {
+    font-size: 1.4rem;
+    color: rgba(0, 0, 0, 0.4);
+    line-height: 1.3;
+    max-width: 25rem;
+    display: block;
+    margin: 0 auto 2rem auto;
+}
+
+div.card.confirmation-detail-card {
+    margin: 0 0 6rem 0;
+    position: relative;
+}
+
+div.card.confirmation-detail-card .confirmation-card-header {
+    border-bottom: 2px solid #00a3d3; /* Secondary Color */
+}
+
+div.card.confirmation-detail-card .confirmation-header-title {
+    color: #ffffff;
+    position: absolute;
+    z-index: 9;
+    bottom: 0;
+    padding: 0.5rem 1.5rem;
+    font-weight: 700;
+    font-size: 1.7rem;
+}
+
+div.card.confirmation-detail-card .confirmation-card-block-container {
+    padding: 1.5rem 1.5rem 0 1.5rem;
+    border-bottom: 1px solid #E4E4E4;
+}
+
+div.card.confirmation-detail-card .confirmation-card-block-container:last-child {
+    border: 0;
+}
+
+div.card.confirmation-detail-card .confirmation-card-block {
+    float: left;
+    margin-bottom: 1.5rem;
+    padding: 0;
+}
+
+div.card.confirmation-detail-card .confirmation-card-block .title {
+    color: rgba(0, 0, 0, 0.5);
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.4;
+}
+
+div.card.confirmation-detail-card .confirmation-card-block .text {
+    color: rgba(0, 0, 0, 0.5);
+    font-weight: 300;
+    font-size: 1.25rem;
+    line-height: 1.4;
+}
+
+/*********************
+    QUANTITY TOOL CSS
+**********************/
+
+.quantity-tool {
+    display: inline-block;
+}
+
+.quantity-tool li {
+    padding: 0.8rem 1.2rem;
+    float: left;
+    line-height: 1;
+    border: 1px solid #E4E4E4;
+}
+
+.quantity-tool li.decrement {
+    border-right: 0;
+    border-radius: 0.4rem 0 0 0.4rem;
+    cursor: pointer;
+}
+
+.quantity-tool li.quantity {
+    min-width: 3.2rem;
+    outline: none;
+}
+
+.quantity-tool li.increment {
+    border-left: 0;
+    border-radius: 0 0.4rem 0.4rem 0;
+    cursor: pointer;
+}
+
+.quantity-tool li.increment:hover,
+.quantity-tool li.decrement:hover {
+    background-color: #CCCCCC; /* Primary Color */
+    border-color: #CCCCCC; /* Primary Color */
+    color: #ffffff;
+    transition: all 0.2s ease-out;
+}
+
+.quantity-tool li.disabled {
+    background: #f5f5f5;
+    color: #3e3e3e;
+}

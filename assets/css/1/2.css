@@ -1,0 +1,84 @@
+
+
+html {
+    font-size: 10px;
+}
+
+body {
+  
+
+
+}
+
+html, body {
+    height: 100%;
+    min-height: 100%; /* for firefox */
+}
+
+p, h1, h2, h3, h4 ,{
+    margin: 0;
+}
+
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 300;
+}
+
+h2 {
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 1.4rem;
+    font-weight: normal;
+}
+h6 {
+    font-size: 13px;
+    font-weight: normal;
+}
+
+label {
+    font-size: inherit;
+    cursor: default;
+    line-height: normal;
+    color: inherit;
+    display: inline;
+}
+
+
+.dropdown-item
+
+{
+
+    font-size:15px;
+}
+
+p {
+margin-bottom: 0;
+}
+body
+{
+font-size: 14px;
+}
+.navbar-brand 
+{
+
+display: inline-block;
+padding-top: 0.32421875rem;
+padding-bottom: 0.32421875rem;
+margin-right: 1rem;
+font-size: large;
+line-height: inherit;
+white-space: nowrap;
+}
+.navbar-nav .nav-link {
+padding-right: 0;
+padding-left: 0;
+
+font-size: 15px;
+
+
+
+}
