@@ -220,7 +220,7 @@ if($row){
          $edate=$this->input->post('edate');
          $etime=$this->input->post('etime');
 
-      
+      	$this->load->helper('date');
          $event=array(
          	'event_name'=>$ename,
          	'event_description'=>$edes,
@@ -263,6 +263,8 @@ echo"<script type='text/javascript' src='<?php echo base_url();?>assets/js/sweet
 		$this->load->view('templates/admin-head',$row);
 		$this->load->view('events/viewEvents');
 		$this->load->view('templates/admin-foot');
+
+		
 	}
 
 
@@ -295,10 +297,15 @@ public function update_event()
 		$this->load->model('admin_model','p');
 
 		$row=$this->p->update_event($id);
+
+
 		$d=json_encode($row); 
 	 		print_r($d);
+	 
 
 	}
+
+
 public function update_event1()
 	{
 	if($_SESSION['admin_logged']!=1)
@@ -338,6 +345,8 @@ public function update_event1()
 		print_r($row);
 
 	}
+
+
 
 
 }

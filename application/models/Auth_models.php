@@ -21,8 +21,11 @@ class auth_models extends CI_Model
 	}
  
 	public function activate($data, $id){
-		$this->db->where('register.alumni_id', $id);
-		return $this->db->update('register', $data);
+	
+
+	$this->db->set($data);
+$this->db->where('register.user_name',$id);
+return $this->db->update('register'); 
 	}
 
 	public function getlogin($data)
@@ -49,7 +52,15 @@ class auth_models extends CI_Model
 
 	public function getid($email)
 	{
-		$this->db->select('alumni_id');
+		$this->db->select('user_name');
+		$this->db->from('register');
+		$this->db->where(array('email'=>$email));
+		$query=$this->db->get();
+		return $query->row();
+	}
+public function getall($email)
+	{
+		$this->db->select('*');
 		$this->db->from('register');
 		$this->db->where(array('email'=>$email));
 		$query=$this->db->get();
@@ -60,7 +71,7 @@ class auth_models extends CI_Model
 	public function updatepass($id,$data)
 	{
 
-		$this->db->where('register.alumni_id', $id);
+		$this->db->where('register.user_name', $id);
 		return $this->db->update('register', $data);
 	}
 		
@@ -75,9 +86,11 @@ class auth_models extends CI_Model
 			public function gettoken($id)
 
 		{
-			
-			$query=$this->db->get_where('token',array('id'=>$id));
 
+			
+			$query=$this->db->query("SELECT * FROM `token` WHERE id='$id' ORDER BY token_id DESC");
+
+		
 			return $query->row();
 
 

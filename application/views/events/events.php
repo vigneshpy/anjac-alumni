@@ -1,3 +1,12 @@
+<style type="text/css">
+  .card
+  {
+    height: 270px;
+    top: 5px;
+  }
+</style>
+
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -38,8 +47,6 @@
 </div>
     <!-- Full Page Intro -->
         <div class="view" style="background-image: url('<?php echo base_url();?>assets/images1/eventsbg.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
-          <!-- <video class="video-intro" poster="https://mdbootstrap.com/img/Photos/Others/background.jpg" playsinline autoplay muted loop>
-            <source src="https://mdbootstrap.com/img/video/animation.mp4" type="video/mp4">
           </video> -->
           <!-- Mask & flexbox options-->
           <div class="mask rgba-gradient align-items-center">
@@ -69,21 +76,23 @@
       <h2 class="text-center mt-5 mb-5 pb-2 text-dark"><strong>Upcoming Events</strong></h2>
       <div class="container">
         <div class="card-carousel" style="padding-bottom:20px;">
+        
+<?php foreach($data as $row):?>
           <!-- Card -->
-<div class="card" style="bottom:10px;">
+<div class="card" style="bottom:5px;">
 
   <!-- Card image -->
-  <img class="card-img-top" src="images/meet.jpg" alt="Card image cap">
 
   <!-- Card content -->
   <div class="card-body">
 
     <!-- Title -->
-    <h4 class="card-title"><a>Alumni meet</a></h4>
+     <h4 class="card-title"><?php echo $row['event_name']?></h4>
     <!-- Text -->
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <p class="card-text"><?php echo $row['event_description']?></p>
     <hr>
-    <p class="card-text">30 feb 2019</p>
+    <p class="card-text"><i class="fa fa-calendar"></i><?php echo " ".$row['event_date']?></p>
+    <p class="card-text"><i class="fa fa-clock"> </i> <?php echo $row['event_time']?></p>
     <!-- Button -->
     <button type="button" name="button" class="btn btn-primary" data-toggle="modal" data-target="#basicExampleModal">Know more</button>
 
@@ -91,76 +100,10 @@
 
 </div>
 
-<!-- Card -->
-<!-- Card -->
-<div class="card" style="bottom:10px;">
-
-  <!-- Card image -->
-  <img class="card-img-top" src="images/photography.jpg" alt="Card image cap">
-
-  <!-- Card content -->
-  <div class="card-body">
-
-    <!-- Title -->
-    <h4 class="card-title"><a>conference on photography</a></h4>
-    <!-- Text -->
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <hr>
-    <p class="card-text">30 feb 2019</p>
-    <!-- Button -->
-    <a href="#" class="btn btn-primary">Know more</a>
-
-  </div>
-
-</div>
+<?php endforeach?>
 
 <!-- Card -->
-<!-- Card -->
-<div class="card" style="bottom:10px;">
 
-  <!-- Card image -->
-  <img class="card-img-top" src="images/party.jpg" alt="Card image cap">
-
-  <!-- Card content -->
-  <div class="card-body">
-
-    <!-- Title -->
-    <h4 class="card-title"><a>Alumni party</a></h4>
-    <!-- Text -->
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <hr>
-    <p class="card-text">30 feb 2019</p>
-    <!-- Button -->
-    <a href="#" class="btn btn-primary">Know more</a>
-
-  </div>
-
-</div>
-
-<!-- Card -->
-<!-- Card -->
-<div class="card" style="bottom:10px;">
-
-  <!-- Card image -->
-  <img class="card-img-top" src="images/skull.jpg" alt="Card image cap">
-
-  <!-- Card content -->
-  <div class="card-body">
-
-    <!-- Title -->
-    <h4 class="card-title"><a>seminar on skull theory</a></h4>
-    <!-- Text -->
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <hr>
-    <p class="card-text">30 feb 2019</p>
-    <!-- Button -->
-    <a href="#" class="btn btn-primary">Know more</a>
-
-  </div>
-
-</div>
-
-<!-- Card -->
 
         </div>
       </div>
@@ -174,7 +117,6 @@
 <div class="card" style="bottom:10px;">
 
 <!-- Card image -->
-<img class="card-img-top" src="images/Convocation.jpg" alt="Card image cap">
 
 <!-- Card content -->
 <div class="card-body">
@@ -195,7 +137,6 @@
 <div class="card" style="bottom:10px;">
 
 <!-- Card image -->
-<img class="card-img-top" src="images/django.png" alt="Card image cap">
 
 <!-- Card content -->
 <div class="card-body">
@@ -216,7 +157,6 @@
 <div class="card" style="bottom:10px;">
 
 <!-- Card image -->
-<img class="card-img-top" src="images/game.jpg" alt="Card image cap">
 
 <!-- Card content -->
 <div class="card-body">
@@ -237,7 +177,6 @@
 <div class="card" style="bottom:10px;">
 
 <!-- Card image -->
-<img class="card-img-top" src="images/indiatoday.jpg" alt="Card image cap">
 
 <!-- Card content -->
 <div class="card-body">

@@ -49,10 +49,7 @@ width:450px;
     
 </div>
 <br>
- <label class="custom-control-label" for="defaultLoginFormRemember" name="eimage" >Image(optional)</label>
-<br>
-<span class="btn btn-file" style="color: black !important"><input type="file" style="color: black !important"/></span>
- <?php echo form_error('eimage','<div class="text-danger">','</div>'); ?>
+
 
 
 <button class="btn btn-success btn-block my-4" id="sub" name="esubmit" value="Add Event">Add Event</button>

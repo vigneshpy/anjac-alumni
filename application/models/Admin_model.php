@@ -140,7 +140,9 @@ public function insert_event($data)
 public function get_events()
 {
 
-	$query=$this->db->get('events');
+	$sql="SELECT event_id,event_name,event_description,DATE_FORMAT(event_date, ' %b %d %Y') AS event_date,DATE_FORMAT(event_time, '%h:%i %p')AS event_time FROM events";
+	
+	$query=$this->db->query($sql);
 
 	return $query->result_array();
 
@@ -175,6 +177,7 @@ public function update_event1($id,$data)
 	$query=$this->db->update('events');
 		print_r($query);
 }
+
 
 
 

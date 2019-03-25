@@ -11,7 +11,7 @@
   <title>Login Page</title>
 
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/css/login.css"
+<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/css/login.css">
 
   <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
@@ -34,7 +34,7 @@
             <div class="alert alert-success"><?php echo $_SESSION['success']?></div>
          <?php }?>
          <?php if(isset($_SESSION['warning'])){?>
-            <div class="alert alert-warning"><?php echo $_SESSION['warning']?></div>
+            <div class="alert alert-warning"><?php echo $_SESSION['warning']?><a href="<?php echo base_url();?>/auth/resend_mail">Resend Mail</a></div>
          <?php }?>
        
       <div class="card-body">

@@ -45,9 +45,9 @@
                                                 <td ><?php echo $row['event_time']?></td>
                                              
                                         
-                                                <td style="margin-top:20px;"><a href="" class="btn btn-primary" tooltip="view the user" style="padding:5px;margin:5px;"><i class="fa fa-eye"></i></a>
+                                                <td style="margin-top:20px;"><a href="" class="btn btn-primary" tooltip="view the event" style="padding:5px;margin:5px;"><i class="fa fa-eye"></i></a>
 
-                                                <button class="delete_user btn btn-danger outline" id="<?php echo $row['event_id']?>" style="padding:5px;margin:5px;"><i class="fa fa-trash"></i></button> 
+                                                <button class="delete_event btn btn-danger outline" id="<?php echo $row['event_id']?>" style="padding:5px;margin:5px;"><i class="fa fa-trash"></i></button> 
 
                                                 <button class="update_user btn btn-success outline" id="<?php echo $row['event_id']?>"data-toggle="modal" data-backdrop="false" data-target="#updatemodal" style="padding:5px;margin:5px;"><i class="fa fa-pencil"></i></button>
 
@@ -184,6 +184,55 @@ $('.clockpicker').clockpicker({
 
 
 
+<script type="text/javascript">
+$(document).ready(function()
+
+{
+
+
+    $(".delete_event").click(function()
+    {
+     
+      swal({
+  title: "Are you sure?",
+  text: "you will not be able to recover this Event!",
+  icon: "warning",
+  buttons: true,
+  dangerMode: true,
+})
+.then((willDelete) => {
+  if (willDelete) {
+    swal("Poof! Event Removed", {
+      icon: "success",
+
+    });
+
+var del_id = $(this).attr('id');
+var element = $(this);
+$.ajax({
+            type:'GET',
+            url:'<?php echo base_url();?>admin/event_delete',
+            data:'delete_id='+del_id,
+            success: function(data)
+            {
+                 
+                  
+            }
+
+        });
+ $(this).parents("tr").animate({ backgroundColor: "#003" }, "slow")
+  .animate({ opacity: "hide" }, "slow");
+  } else {
+    swal("Cancelled",{
+      icon:"info",
+    });
+  }
+});
+
+    });
+});
+</script>
+ 
 
 
 

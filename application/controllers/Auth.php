@@ -20,9 +20,7 @@ class auth extends CI_Controller
                     
                     
                 );
-                
-                
-                
+               
                 $this->load->model('auth_models');
                 
                 
@@ -284,7 +282,7 @@ class auth extends CI_Controller
                         $token = array(
                             'token' => $code,
                             'time' => date('Y-m-d H:i:s'),
-                            'id' => $id
+                            'id' => $username
                         );
                         
                         
@@ -297,7 +295,7 @@ class auth extends CI_Controller
                         
                         $cod = array(
                             'code' => $code,
-                            'id' => $id,
+                            'id' => $username,
                             'fname' => $fname,
                             'email' => $email
                         );
@@ -309,7 +307,7 @@ class auth extends CI_Controller
                         // $this->email->initialize($config);
                         
                         $this->load->library('email');
-                        $this->email->from('vickypotter2516@gmail.com', 'Anjac');
+                        $this->email->from('alumnianjac@gmail.com', 'Anjac');
                         $this->email->to($email, $this->session->userdata('fname'));
                         $this->email->subject('Account Activation');
                         $this->email->message($message);
@@ -318,7 +316,7 @@ class auth extends CI_Controller
                             
                             redirect('login', 'refresh');
                         } else {
-                            $this->session->set_flashdata('error','Check Your Internet Connction');
+                            $this->session->set_flashdata('error','Some thing Went Wrong');
                             
                             redirect('basicinfo', 'refresh');
                             
@@ -338,12 +336,17 @@ class auth extends CI_Controller
     public function activate()
     {
         $id   = $this->uri->segment(3);
+
+        echo"<script>alert('$id')</script>";
+
         $code = $this->uri->segment(4);
         //fetch user details
         $this->load->model('auth_models');
         $user  = $this->auth_models->getUser($id);
         //get the token from the database
         $fetch = $this->auth_models->gettoken($id);
+
+        print_r($fetch);
         
         
         
@@ -357,7 +360,9 @@ class auth extends CI_Controller
                 if ($fetch->clicked == 0) {
                     
                     $data['active'] = 1;
-                    $query          = $this->auth_models->activate($data, $id);
+                    $query = $this->auth_models->activate($data, $id);
+
+                    print_r($query);
                     
                     if ($query) {
                         $this->session->set_flashdata('success', 'User activated successfully');
@@ -442,20 +447,20 @@ class auth extends CI_Controller
                 
                            }    
                             if ($user) {
-                    $set  = '123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+                    $set  = '123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'.md5();
                     $code = substr(str_shuffle($set), 0, 24);
                     
                     
                     $cod = array(
                         'code' => $code,
                         'email' => $femail,
-                        'id' => $id->alumni_id
+                        'id' => $id->user_name
                     );
 
                     $token_reset=array(
                     	'token'=>$code,
                     	'time'=>date('Y-m-d H:i:s'),
-                    	'id'=>$id->alumni_id);
+                    	'id'=>$id->user_name);
 
                     	$this->auth_models->insert_token_reset($token_reset);
 
@@ -584,10 +589,88 @@ class auth extends CI_Controller
         
     }
     
+public function resend_mail()
+{  
+          
+ if (isset($_POST['resend'])) {
+            $this->form_validation->set_rules('email', 'Email', 'trim|required|xss_clean|valid_email', array(
+                'Your Email Address is required'
+            ));
 
+
+            
+            if ($this->form_validation->run() === TRUE) {
+
+
+
+                $femail = $this->input->post('email');
+                $this->load->model('auth_models');
+                $id = $this->auth_models->getall($femail);
+                    if($id->active==0)
+                    {
+                $user = $this->auth_models->forgot($femail);
+    if ($user) {
+       $set  = '123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+                        $code = substr(str_shuffle($set), 0, 12);
+                           
+                        $username=$id->user_name;
+                        $fname=$id->fname;
+                        $email=$id->email;
+                        $token = array(
+                            'token' => $code,
+                            'time' => date('Y-m-d H:i:s'),
+                            'id' => $username);
+                        $tok = $this->auth_models->insert_token($token);
+                     $cod = array(
+                            'code' => $code,
+                            'id' => $username,
+                            'fname' => $fname,
+                            'email' => $email);
+                        $this->session->set_userdata($cod);
+                        $message = $this->load->view('email/body', $cod, TRUE);
+                        $this->load->library('email');
+                        $this->email->from('alumnianjac@gmail.com', 'Anjac');
+                        $this->email->to($email, $this->session->userdata('fname'));
+                        $this->email->subject('Account Activation');
+                        $this->email->message($message);
+                        if ($this->email->send()) {
+
+                            $this->session->set_flashdata('warning', 'Another Verification Link Sent To Your Email');
+                            
+                            redirect('login', 'refresh');
+                        } else {
+                            $this->session->set_flashdata('error','Some thing Went Wrong');
+                            
+                            redirect('login', 'refresh');
+                        }
+
+                    }
+                    else
+                    {
+                         $this->session->set_flashdata('error', 'No Such Account exists');
+                    
+                    redirect('auth/resend', 'refresh');
+                    }
+
+                }
+                else
+                {
+                         $this->session->set_flashdata('success', 'Account Already activated');
+                    
+                    redirect('login', 'refresh');
+                }
+
+}
+        
+                        
+}
+
+$this->load->view('templates/header');
+$this->load->view('auth/resend');
+$this->load->view('templates/footer');
 
      
-    
+    }
     
     
 }

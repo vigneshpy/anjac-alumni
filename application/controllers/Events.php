@@ -9,8 +9,12 @@ class events extends CI_Controller
 
 	public function index()
 	{
+		$this->load->model('event_model','e');
+
+		$row['data']=$this->e->get_events();
+		// print_r($row);
 		$this->load->view('templates/header');
-		$this->load->view('events/events');
+		$this->load->view('events/events',$row);
 		$this->load->view('templates/footer');
 
 	}
@@ -27,4 +31,6 @@ class events extends CI_Controller
 		$this->load->view('templates/footer');
 
 	}
+
+
 }
