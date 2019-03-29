@@ -18,35 +18,27 @@ public function get_events()
 	
 }
 
-
-
-public function wrapped_up_event($id)
+public function  get_proposed_events()
 {
-	$sql="CREATE EVENT wrapped_up_event ON SCHEDULE(SELECT event_date FROM events where event_id=$id) 
-	DO 
-	SELECT * FROM events";
+	$sql="SELECT event_name,event_description,student_participate,first_name,last_name,email,DATE_FORMAT(event_date, ' %b %d %Y') AS event_date FROM proposed_event WHERE approved=1 AND denied=0 order by event_date ASC limit 5";
+	$query=$this->db->query($sql);
+
+	return $query->result_array();
+}
+
+
+public function insert_prpose_event($event)
+{
+	$sql=$this->db->insert('proposed_event',$event);
+
+
+}
+
+
 
 
 
 }
 
 
-}
 
-
-
-//event
-
-// CREATE EVENT event_name
-//     ON SCHEDULE
-//       period_of_time
-//     DO
-//       your_code_here
-
-
-
-// CREATE EVENT my_event
-//   ON SCHEDULE
-//     AT ('2014-04-30 00:20:00'+ INTERVAL 1 DAY) ON COMPLETION PRESERVE ENABLE 
-//   DO
-//     # My query

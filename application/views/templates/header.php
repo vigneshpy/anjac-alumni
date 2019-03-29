@@ -2,6 +2,11 @@
 <!DOCTYPE html>
 <html>
 
+<style type="text/css">
+  .pointer {width: 500px !important;}
+  }
+</style>
+
   <title></title>
   <link rel="stylesheet" type="text/css" href="https://bootswatch.com/4/flatly/bootstrap.min.css">
    <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/off/boot.css">

@@ -109,97 +109,46 @@
       </div>
 <br>
 <div class="#fafafa grey lighten-5" style="padding:10px;">
-<h2 class="text-center mt-5 mb-5 pb-2 text-dark"><strong>Wraped up Events</strong></h2>
+<h2 class="text-center mt-5 mb-5 pb-2 text-dark"><strong>Proposed Events</strong></h2>
 
 <div class="container">
   <div class="card-carousel" style="padding-bottom:20px;">
     <!-- Card -->
-<div class="card" style="bottom:10px;">
+        
+<?php foreach($data1 as $row):?>
+          <!-- Card -->
+<div class="card" style="bottom:5px;">
 
-<!-- Card image -->
+  <!-- Card image -->
 
-<!-- Card content -->
-<div class="card-body">
+  <!-- Card content -->
+  <div class="card-body">
 
-<!-- Title -->
-<h4 class="card-title"><a>Convocation</a></h4>
-<!-- Text -->
-<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-<!-- Button -->
-<a href="#" class="btn btn-primary">Know more</a>
-
-</div>
-
-</div>
-
-<!-- Card -->
-<!-- Card -->
-<div class="card" style="bottom:10px;">
-
-<!-- Card image -->
-
-<!-- Card content -->
-<div class="card-body">
-
-<!-- Title -->
-<h4 class="card-title"><a>Alumni lecture by Vignesh</a></h4>
-<!-- Text -->
-<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-<!-- Button -->
-<a href="#" class="btn btn-primary">Know more</a>
-
-</div>
-
-</div>
-
-<!-- Card -->
-<!-- Card -->
-<div class="card" style="bottom:10px;">
-
-<!-- Card image -->
-
-<!-- Card content -->
-<div class="card-body">
-
-<!-- Title -->
-<h4 class="card-title"><a>Workshop on game art design</a></h4>
-<!-- Text -->
-<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-<!-- Button -->
-<a href="#" class="btn btn-primary">Know more</a>
-
-</div>
-
-</div>
-
-<!-- Card -->
-<!-- Card -->
-<div class="card" style="bottom:10px;">
-
-<!-- Card image -->
-
-<!-- Card content -->
-<div class="card-body">
-
-<!-- Title -->
-<h4 class="card-title"><a>Lecture on India today</a></h4>
-<!-- Text -->
-<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-<!-- Button -->
-<a href="#" class="btn btn-primary">Know more</a>
-
-</div>
-
-</div>
-
-<!-- Card -->
+    <!-- Title -->
+     <h4 class="card-title"><?php echo $row['event_name']?></h4>
+    <!-- Text -->
+    <p class="card-text"><?php echo $row['event_description']?></p>
+    <hr>
+    <p class="card-text"><i class="fa fa-calendar"></i><?php echo " ".$row['event_date']?></p>
+     <!-- <p class="card-text"><i class="fa fa-user"> </i> <?php echo $row['no_student']?></p> -->
+    <p class="card-text"><i class="fa fa-user"> </i> <?php echo $row['student_participate']?></p>
+    <!-- Button -->
+    <button type="button" name="button" class="btn btn-primary" data-toggle="modal" data-target="#basicExampleModal">Know more</button>
 
   </div>
+
+</div>
+
+<?php endforeach?>
+
+
+<!-- Card -->
+
 </div>
 
 </div>
 
-
+</div>
   <br>
   <br>
   <br>

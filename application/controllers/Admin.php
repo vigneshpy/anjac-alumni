@@ -11,6 +11,10 @@ public function __construct()
 		$this->load->database();
 		$this->load->library('form_validation');
 		$this->load->model('admin_model','a');
+
+		$event_request['nor']=$this->a->retrive_num_request();
+
+		$this->load->view('templates/admin-foot',$event_request);
 	
 	}
 
@@ -40,6 +44,8 @@ public function __construct()
             $this->load->model('admin_model','a');
 
 	$row=$this->a->getadmin($data); 
+
+
 
 
 
@@ -299,9 +305,8 @@ public function update_event()
 		$row=$this->p->update_event($id);
 
 
-		$d=json_encode($row); 
-	 		print_r($d);
-	 
+
+		return json_encode($row); 	 
 
 	}
 
@@ -342,9 +347,82 @@ public function update_event1()
 
 		$row=$this->p->update_event1($id,$data);
 		
-		print_r($row);
+	
 
 	}
+
+	public function event_request()
+	{
+		if($_SESSION['admin_logged']!=1)
+		{
+			$this->session->set_flashdata('error','Not Authorized Please Login to continue');
+			redirect('admin');
+		}
+
+
+		$this->load->model('admin_model','a');
+
+		$row['data']=$this->a->get_proposed_event_pending();
+		$row['data1']=$this->a->get_proposed_event_allowed();
+		$row['data2']=$this->a->get_proposed_event_denied();
+		$this->load->view('templates/admin-head');
+		$this->load->view('events/event-request.php',$row);
+		$this->load->view('templates/admin-foot');
+	}
+
+
+	public function event_allow()
+	{
+		if($_SESSION['admin_logged']!=1)
+{
+	$this->session->set_flashdata('error','Not Authorized Please Login to continue');
+			redirect('admin');
+}
+
+				$id=$_GET['event_id'];
+		$this->load->model('admin_model','p');
+
+		$row=$this->p->allow_event($id);
+
+
+	
+	}
+
+	public function event_deny()
+	{
+		if($_SESSION['admin_logged']!=1)
+{
+	$this->session->set_flashdata('error','Not Authorized Please Login to continue');
+			redirect('admin');
+}
+
+				$id=$_GET['event_id'];
+		$this->load->model('admin_model','p');
+
+		$row=$this->p->deny_event($id);
+
+
+	
+	}
+
+	public function event_deny_delete()
+	{
+		if($_SESSION['admin_logged']!=1)
+{
+	$this->session->set_flashdata('error','Not Authorized Please Login to continue');
+			redirect('admin');
+}
+
+				$id=$_GET['event_id'];
+		$this->load->model('admin_model','p');
+
+		$row=$this->p->deny_event_delete($id);
+
+
+	
+	}
+
+
 
 
 

@@ -162,7 +162,8 @@ $this->db->where(array('event_id' => $id));
 public function update_event($id)
 {
 
-$query=$this->db->get_where('events',array('event_id' => $id));
+$query=$this->db->query("SELECT * FROM events WHERE event_id='$id'");
+
 
 
 return $query->row();
@@ -179,6 +180,63 @@ public function update_event1($id,$data)
 }
 
 
+public function retrive_num_request()
+{
+	$query=$this->db->get_where('proposed_event',array('approved' => 0,'denied'=>0));
+	return $query->num_rows();
+
+
+}
+
+
+public function  get_proposed_event_pending()
+{
+	$sql=$this->db->get_where('proposed_event',array('approved' => 0,'denied' => 0));
+
+	return $sql->result_array();
+}
+
+public function  get_proposed_event_allowed()
+{
+	$sql=$this->db->get_where('proposed_event',array('approved' => 1,'denied' => 0));
+
+	return $sql->result_array();
+}
+
+public function get_proposed_event_denied()
+{
+	$sql=$this->db->get_where('proposed_event',array('approved' => 0,'denied' => 1));
+
+	return $sql->result_array();
+}
+
+public function allow_event($id)
+{
+	$this->db->set(array('approved' => 1,'denied' => 0));
+	$this->db->where('propose_id', $id);
+
+
+	$query=$this->db->update('proposed_event');
+		
+}
+
+public function deny_event($id)
+{
+	$this->db->set(array('denied' => 1,'approved'=>0));
+	$this->db->where('propose_id', $id);
+
+
+	$query=$this->db->update('proposed_event');
+		
+}
+
+
+	public function  deny_event_delete($id)
+	{
+		$this->db->where(array('propose_id' => $id));
+			$query=$this->db->delete('proposed_event');
+
+	}
 
 
 

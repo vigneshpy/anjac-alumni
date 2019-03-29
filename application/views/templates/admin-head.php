@@ -83,7 +83,8 @@
                     <li>
                         <a class="nav-link" href="<?php echo base_url();?>admin/event-request">
                             <i class="fa fa-paper-plane"></i>
-                            <p>Event Request</p>
+                            <span class='badge badge-warning' id='lblCartCount'><?php echo $nor?></span>
+                            <p>Event Request </p>
                         </a>
                     </li>
                     <li>
@@ -158,7 +159,29 @@
             </nav>
 
 
+<style type="text/css">
+    .header{background:rgb(0, 178, 255);color:#fff;}
+#lblCartCount {
+    font-size: 12px;
+    background: #ff0000;
+    color: #fff;
+    padding: 0 5px;
+    vertical-align: top;
+    margin-left: -10px;
+}
+.badge {
+  padding-left: 9px;
+  padding-right: 9px;
+  -webkit-border-radius: 9px;
+  -moz-border-radius: 9px;
+  border-radius: 19px;
+}
 
+.label-warning[href],
+.badge-warning[href] {
+  background-color: #c67605;
+}
+</style>
 
 <script type="text/javascript" src="https://bootswatch.com/_vendor/jquery/dist/jquery.min.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="<?php echo base_url();?>assets/js1/mdb.js"></script>

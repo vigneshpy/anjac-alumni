@@ -1,0 +1,83 @@
+html,
+body,
+header,
+.view {
+
+  height: 100%;
+}
+
+@media (max-width: 740px) {
+  html,
+  body,
+  header,
+  .view {
+    height: 100vh;
+  }
+}
+
+
+.rgba-gradient {
+  background: -moz-linear-gradient(45deg, rgba(42, 27, 161, 0.7), rgba(29, 210, 177, 0.7) 90%);
+  background: -webkit-linear-gradient(45deg, rgba(42, 27, 161, 0.7), rgba(29, 210, 177, 0.7) 90%);
+  background: -o-linear-gradient(45deg, rgba(42, 27, 161, 0.7), rgba(29, 210, 177, 0.7) 90%);
+  background: linear-gradient(to 45deg, rgba(42, 27, 161, 0.7), rgba(29, 210, 177, 0.7) 90%);
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid rgba(29, 210, 177, 0.7);
+    margin: 1em 0;
+    padding: 0;
+}
+
+h2{
+	position: relative;
+}
+h2::after{
+	content: "";
+	width: 130px;
+	position: absolute;
+	margin: 0 auto;
+	height: 3px;
+	background: rgba(29, 210, 177, 0.7);
+	left: 0;
+	right: 0;
+	bottom: -10px;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: rgba(29, 210, 177, 0.7)!important;
+}
+
+/* the slides */
+.slick-slide {
+  margin: 0 27px;
+}
+/* the parent */
+.slick-list {
+  margin: 0 -27px;
+}
+ul.slick-dots{
+  bottom:-45px !important;
+}
+img{
+  height: 250px;
+  width: 300px;
+}
+.active-amber-textarea.md-form label.active {
+    color: #0d47a1;
+}
+.amber-textarea textarea.md-textarea:focus:not([readonly]) {
+    border-bottom: 1px solid #0d47a1;
+    box-shadow: 0 1px 0 0 #0d47a1;
+}
+.amber-textarea.md-form .prefix.active {
+    color: #0d47a1;
+}
+.md-form input.form-control[type="datetime-local"] ~ label {
+transform: translateY(-140%);
+font-size: .8rem;
+}

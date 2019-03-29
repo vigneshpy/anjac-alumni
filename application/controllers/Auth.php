@@ -143,7 +143,7 @@ class auth extends CI_Controller
                     'user_name'=>$username,
                     'email' => $_POST['email'],
                     'pno' => $_POST['pno'],
-                    'password' => md5($_POST['p1']),
+                    'password' => $_POST['p1'],
                     'created_date' =>date("d/m/Y"),
                     'session_' => TRUE
                     
@@ -316,7 +316,8 @@ class auth extends CI_Controller
                             
                             redirect('login', 'refresh');
                         } else {
-                            $this->session->set_flashdata('error','Some thing Went Wrong');
+                             print_r($this->email->print_debugger());
+                            // $this->session->set_flashdata('error','Some thing Went Wrong');
                             
                             redirect('basicinfo', 'refresh');
                             
@@ -671,6 +672,9 @@ $this->load->view('templates/footer');
 
      
     }
+
+
+    
     
     
 }

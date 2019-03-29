@@ -89,7 +89,7 @@ public function getall($email)
 
 			
 			$query=$this->db->query("SELECT * FROM `token` WHERE id='$id' ORDER BY token_id DESC");
-
+				
 		
 			return $query->row();
 

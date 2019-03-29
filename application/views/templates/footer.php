@@ -77,7 +77,7 @@ footer.page-footer a {
         <div class="row">
           <!-- Grid column -->
           <div class="col-md-12 py-5">
-            <div class="mb-5 flex-center">
+            <div class="mb-5" align="center">
               <!-- Facebook -->
               <a class="fb-ic" href="https://mdbootstrap.com/docs/jquery/sections/magazine/">
                 <i class="fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x"></i>

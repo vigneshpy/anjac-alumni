@@ -118,9 +118,12 @@
 
 
 <script type="text/javascript">
-//delete events
+//retrive event
  $(document).on('click', '.update_user', function(){  
            var event_id = $(this).attr("id");  
+
+
+           alert(event_id);
 
           
            $.ajax({   
@@ -131,6 +134,7 @@
                   // alert(data);
                   var response = JSON.parse(data);
 
+                
                     $('#evt-name').val(response.event_name);  
                     $('#evt-id').val(response.event_id);  
                    
@@ -159,7 +163,7 @@
                          
                      },    
                 success:function(data){  
-     
+                    window.location.reload();
                 } ,
                   
                   
@@ -216,7 +220,8 @@ $.ajax({
             success: function(data)
             {
                  
-                  
+                window.location.reload();
+
             }
 
         });
