@@ -105,6 +105,12 @@ if($row){
 	//display the total number of  users
 	public function userprofile()
 	{
+		if($_SESSION['admin_logged']!=1)
+		{
+			$this->session->set_flashdata('error','Not Authorized Please Login to continue');
+			redirect('admin');
+		}
+			
 
 			$this->load->model('admin_model','p');
 
@@ -150,6 +156,7 @@ if($row){
 
 	public function admin_delete()
 	{
+		
 			if($_SESSION['admin_logged']!=1)
 		{
 			$this->session->set_flashdata('error','Not Authorized Please Login to continue');
@@ -260,7 +267,12 @@ echo"<script type='text/javascript' src='<?php echo base_url();?>assets/js/sweet
 	}
 
 	public function view_event()
-	{
+	{if($_SESSION['admin_logged']!=1)
+		{
+			$this->session->set_flashdata('error','Not Authorized Please Login to continue');
+			redirect('admin');
+		}
+			
 		$this->load->model('admin_model','a');
 
 		$row['data']=$this->a->get_events();

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title></title>
-  
+
     <style media="screen">
     .btn:focus, .btn:active, button:focus, button:active {
 outline: none !important;
@@ -161,7 +161,7 @@ margin-bottom: 15px;
             </div>
           </div>
           </div>
-          
+    
             <script type="text/javascript">
             let modalId = $('#image-gallery');
 

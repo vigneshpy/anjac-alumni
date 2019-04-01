@@ -4,8 +4,20 @@
 
 class events extends CI_Controller
 {
+{
+public function __construct()
+	{
+		parent::__construct();
+		$this->load->database();
+		$this->load->helper('url');
+            $this->session->set_userdata('last_page', current_url());
+		// $this->load->model('auth_models');
+		
+	
+	}
 
-
+            
+       
 
 	public function index()
 	{

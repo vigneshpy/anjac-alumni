@@ -31,11 +31,11 @@ $route['update']='auth/update_pass';
 $route['robot']='my404/my429';
 
 
-$route['notify']='push/sendpush';
 
-$route['success']='push/push_success';
 
-$route['savetoken']='push/token';
+
+
+
 
 $route['needs']='needs/index';
 
@@ -67,5 +67,5 @@ $route['admin/event-request']='admin/event_request';
 
 $route['events/propose-an-event']='events/propose_event';
 
-
+$route['gallery']='home/gallery';
 

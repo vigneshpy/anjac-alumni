@@ -3,10 +3,22 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class auth extends CI_Controller
 {
+
+
+public function __construct()
+    {
+        parent::__construct();
+        $this->load->database();
+
+          
+            
     
-    
+    }
+
     public function login()
     {
+
+    
         if ($_SERVER["REQUEST_METHOD"] == 'POST') {
             $this->form_validation->set_rules('useremail', 'Email', 'trim|xss_clean|required', array(
                 'required' => 'Email Does Not Exists'
@@ -407,8 +419,7 @@ class auth extends CI_Controller
     
     public function forgot()
     {
-        define('SITE_KEY', '6Ldg8YoUAAAAAGj1QBN8JmSCPAv4vICmDiU8JPeX');
-		define('SECRET_KEY', '6Ldg8YoUAAAAAP1IOoZ9ccWbwcE-WfODKDHc_NMZ');
+       
         if (isset($_POST['forgot'])) {
             $this->form_validation->set_rules('email', 'Email', 'trim|required|xss_clean|valid_email', array(
                 'Your Email Address is required'
@@ -422,33 +433,9 @@ class auth extends CI_Controller
                 $id = $this->auth_models->getid($femail);
              
                 $user = $this->auth_models->forgot($femail);
-             function getCaptcha($SecretKey)
-             {
-
-       	 	  $Response = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=".SECRET_KEY."&response={$SecretKey}");
-       	 	 
-        	$Return = json_decode($Response);
-        return $Return;
-    		}
-    		$Return = getCaptcha($this->input->post('g-recaptcha-response'));
-    	
-
-    var_dump($Return);
-    if($Return->success)
-    {
-      
-    }
-    else
-
-    {
- 		redirect('robot');
-    }
-
-
-                
-                           }    
+     
                             if ($user) {
-                    $set  = '123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'.md5();
+                    $set  = '123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
                     $code = substr(str_shuffle($set), 0, 24);
                     
                     
@@ -487,7 +474,7 @@ class auth extends CI_Controller
                     } else {
                         $this->session->set_flashdata('error', 'Please Try again later');
                        
-                        redirect('login', 'refresh');
+                        // redirect('login', 'refresh');
                         
                     }
                     
@@ -503,12 +490,12 @@ class auth extends CI_Controller
                 
                 
                 
-            // }
+            }
             // 
             
         }
         $this->load->view('templates/header');
-        $this->load->view('auth/forgot',SITE_KEY,SECRET_KEY);
+        $this->load->view('auth/forgot');
         $this->load->view('templates/footer');
     }
     
@@ -610,6 +597,7 @@ public function resend_mail()
                     if($id->active==0)
                     {
                 $user = $this->auth_models->forgot($femail);
+                print_r($user);
     if ($user) {
        $set  = '123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
                         $code = substr(str_shuffle($set), 0, 12);

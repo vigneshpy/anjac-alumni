@@ -1,15 +1,10 @@
-<?php
 
-  $this->load->helper('url');
-
-
-            $this->session->set_userdata('last_page', current_url());?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-
-    <link rel="stylesheet" href="<?php echo base_url();?>assets/css1/login.css">
+    <?php include 'header.php'; ?>
+    <link rel="stylesheet" href="css/login.css">
     <title></title>
 
   </head>
@@ -66,23 +61,20 @@
                                   <form method="POST">
                                   <div class="md-form">
                                     <i class="fas fa-envelope prefix"></i>
-                                    <input type="email" id="form2" class="form-control" name="useremail">
-                                      <?php echo form_error('useremail','<div class="text-danger">','</div>'); ?>
-
+                                    <input type="email" id="form2" class="form-control">
                                     <label for="form2" class="">Your email</label>
                                   </div>
                                   <div class="md-form">
                                     <i class="fas fa-lock prefix"></i>
-
-                                    <input type="password" id="form2" class="form-control" name="userpass">
+            <input type="text" class="form-control" name="useremail" placeholder="Email" value="<?php echo set_value('useremail'); ?>">
 
    
-                                 
+                                 "
                                     <label for="form4">Your password</label>
                                   </div>
                                     <?php echo form_error('userpass','<div class="text-danger">','</div>'); ?>
-                                                                   <div class="text-center mt-4">
-                                    <button class="btn btn-info btn-block my-4" type="submit">Sign in</button>
+                                  <div class="text-center mt-4">
+            <input type="password" class="form-control" name="userpass" placeholder="password" >
                                 
                                   </div>
                                   <br>
@@ -93,6 +85,7 @@
                                         <a href="<?php echo base_url();?>/forgot">Forgot password?</a>
                                     </div>
                                    <div>
+                                      <?php echo form_error('useremail','<div class="text-danger">','</div>'); ?>
                                        <!-- Remember me -->
                                        <p class="text-center">Not a member?
                                            <a href="<?php echo base_url();?>/register">Register</a>
@@ -122,17 +115,6 @@
         <!--Main Layout-->
 
 
-  
+    <?php include 'footer.php'; ?>
   </body>
 </html>
-<script type="text/javascript">
-$('input[type=text], input[type=password], input[type=email], input[type=url], input[type=tel], input[type=number], input[type=search], input[type=date], input[type=time], textarea').each(function (element, i) {
- if ((element.value !== undefined && element.value.length > 0) || $(this).attr('placeholder') !== undefined) {
-  $(this).siblings('label').addClass('active');
- }
- else {
-  $(this).siblings('label').removeClass('active');
- }
-});
-$('input[type=email],input[type=password]').val('').siblings('label').addClass('active');
-</script>

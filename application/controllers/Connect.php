@@ -5,7 +5,10 @@ public function __construct()
 	{
 		parent::__construct();
 		$this->load->database();
-		// $this->load->model('auth_models');
+		
+            $this->load->helper('url');
+            $this->session->set_userdata('last_page', current_url());
+       
 		
 	
 	}
@@ -86,7 +89,7 @@ public function  classroom()
 		}
 		else{
 	$this->load->view('templates/header');
-	$this->load->view('connect/classroom');
+	$this->load->view('classroom/classroom');
 	$this->load->view('templates/footer');
 
 }

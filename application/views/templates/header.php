@@ -141,7 +141,7 @@ div.blockOverlay {
   <a  href="register" class="nav-link  dropdown-toggle" data-toggle="dropdown">More </a>
   <div class="dropdown-menu">
     <a class="dropdown-item" href="<?php echo base_url();?>connect">Connect</a>
-    <a class="dropdown-item" href="#">Gallery</a>
+    <a class="dropdown-item" href="<?php echo base_url();?>gallery">Gallery</a>
 <a class="dropdown-item" href="<?php echo base_url();?>faq">FAQ</a>
 
           <li class="nav-item">

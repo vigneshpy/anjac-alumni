@@ -93,12 +93,7 @@
                             <p>Jobs And Internship</p>
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="<?php echo base_url();?>notify">
-                            <i class="fa fa-bell"></i>
-                            <p>Notifications</p>
-                        </a>
-                    </li>
+              
               
                 </ul>
             </div>
