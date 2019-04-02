@@ -56,8 +56,9 @@
                         </a>
                     </li>
                     <li>
-                        <a class="nav-link" href="<?php echo base_url();?>admin/user-need">
+                        <a class="nav-link" href="<?php echo base_url();?>admin/needs-request">
                             <i class="fa fa-sticky-note-o"></i>
+                                <span class='badge badge-warning' id='lblCartCount'><?php echo $nor1?></span>
                             <p>Alumni Needs</p>
                         </a>
                     </li>
@@ -86,7 +87,8 @@
                             <span class='badge badge-warning' id='lblCartCount'><?php echo $nor?></span>
                             <p>Event Request </p>
                         </a>
-                    </li>
+                    </li> 
+               
                     <li>
                         <a class="nav-link" href="">
                             <i class="fa fa-briefcase"></i>

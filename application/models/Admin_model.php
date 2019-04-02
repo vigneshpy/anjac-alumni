@@ -60,7 +60,7 @@ public function numberofuser()
 			$query=$this->db->delete('needs');
 
 
-			$this->db->where(array('post_id' => $id));
+			$this->db->where(array('need_id' => $id));
 			$query=$this->db->delete('comments');
 
 	}
@@ -69,7 +69,7 @@ public function numberofuser()
 	public function  comment_delete($id)
 	{
 
-		$this->db->where(array('post_id' => $id));
+		$this->db->where(array('comment_id' => $id));
 		$query=$this->db->delete('comments');
 
 
@@ -187,6 +187,13 @@ public function retrive_num_request()
 
 
 }
+public function retrive_num_need()
+{
+	$query=$this->db->get_where('needs',array('approved' => 0,'denied'=>0));
+	return $query->num_rows();
+
+
+}
 
 
 public function  get_proposed_event_pending()
@@ -237,6 +244,56 @@ public function deny_event($id)
 			$query=$this->db->delete('proposed_event');
 
 	}
+
+	public function  get_proposed_need_pending()
+{
+	$sql=$this->db->get_where('needs',array('approved' => 0,'denied' => 0));
+
+	return $sql->result_array();
+}
+
+
+
+public function  get_proposed_need_allowed()
+{
+	$sql=$this->db->get_where('needs',array('approved' => 1,'denied' => 0));
+
+	return $sql->result_array();
+}
+
+public function get_proposed_need_denied()
+{
+	$sql=$this->db->get_where('needs',array('approved' => 0,'denied' => 1));
+
+	return $sql->result_array();
+}
+
+
+
+
+public function allow_need($id)
+{
+	$this->db->set(array('approved' => 1,'denied' => 0));
+	$this->db->where('need_id', $id);
+
+
+	$query=$this->db->update('needs');
+	
+}
+public function deny_need($id)
+{
+	$this->db->set(array('denied' => 1,'approved'=>0));
+	$this->db->where('need_id', $id);
+
+
+	$query=$this->db->update('needs');
+	
+}
+public function deny_need_delete($id)
+{
+	$this->db->where(array('need_id' => $id));
+			$query=$this->db->delete('needs');
+}
 
 
 

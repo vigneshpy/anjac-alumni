@@ -65,6 +65,9 @@ $route['admin/view-event']='admin/view_event';
 $route['admin/event-request']='admin/event_request';
 
 
+$route['admin/needs-request']='admin/needs_request';
+
+
 $route['events/propose-an-event']='events/propose_event';
 
 $route['gallery']='home/gallery';

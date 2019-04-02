@@ -13,6 +13,7 @@ public function __construct()
 		$this->load->model('admin_model','a');
 
 		$event_request['nor']=$this->a->retrive_num_request();
+		$event_request['nor1']=$this->a->retrive_num_need();
 
 		$this->load->view('templates/admin-foot',$event_request);
 	
@@ -199,12 +200,13 @@ if($row){
 			$this->session->set_flashdata('error','Not Authorized Please Login to continue');
 			redirect('admin');
 		}
-			
-		$user_name=$_POST['delete_id'];
+		if(isset($_GET['delete_id']))
+			{
+		$id=$_GET['delete_id'];
 		$this->load->model('admin_model','p');
 
-		$this->p->comment_delete($user_name);
-
+		$this->p->comment_delete($id);
+	}
 		
 	}
 
@@ -435,6 +437,79 @@ public function update_event1()
 	}
 
 
+
+
+public function needs_request()
+{
+
+	if($_SESSION['admin_logged']!=1)
+		{
+			$this->session->set_flashdata('error','Not Authorized Please Login to continue');
+		
+			redirect('admin','refresh');
+		}
+			$row['data']=$this->a->get_proposed_need_pending();
+		$row['data1']=$this->a->get_proposed_need_allowed();
+		$row['data2']=$this->a->get_proposed_need_denied();
+		$row['data3']=$this->a->getcomments();
+
+
+				$this->load->view('templates/admin-head');
+		$this->load->view('admin/needs-request.php',$row);
+		$this->load->view('templates/admin-foot');
+			
+}
+
+public function need_allow()
+	{
+		if($_SESSION['admin_logged']!=1)
+{
+	$this->session->set_flashdata('error','Not Authorized Please Login to continue');
+			redirect('admin');
+}
+
+				$id=$_GET['need_id'];
+		$this->load->model('admin_model','p');
+
+		$row=$this->p->allow_need($id);
+
+
+	
+	}
+
+	public function need_deny()
+	{
+		if($_SESSION['admin_logged']!=1)
+{
+	$this->session->set_flashdata('error','Not Authorized Please Login to continue');
+			redirect('admin');
+}
+
+				$id=$_GET['need_id'];
+		$this->load->model('admin_model','p');
+
+		$row=$this->p->deny_need($id);
+
+
+	
+	}
+
+	public function need_deny_delete()
+	{
+		if($_SESSION['admin_logged']!=1)
+{
+	$this->session->set_flashdata('error','Not Authorized Please Login to continue');
+			redirect('admin');
+}
+
+				$id=$_GET['need_id'];
+		$this->load->model('admin_model','p');
+
+		$row=$this->p->deny_need_delete($id);
+
+
+	
+	}
 
 
 

@@ -27,7 +27,7 @@ public function showNeed()
 {
 	$this->db->order_by('need_id','desc');
 
-	$query=$this->db->get('needs');
+	$query=$this->db->get_where('needs',array('approved'=>1));
 
 	return $query->result_array();
 }

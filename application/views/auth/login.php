@@ -1,9 +1,5 @@
-<?php
-
-  $this->load->helper('url');
 
 
-            $this->session->set_userdata('last_page', current_url());?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -130,9 +126,7 @@ $('input[type=text], input[type=password], input[type=email], input[type=url], i
  if ((element.value !== undefined && element.value.length > 0) || $(this).attr('placeholder') !== undefined) {
   $(this).siblings('label').addClass('active');
  }
- else {
-  $(this).siblings('label').removeClass('active');
- }
+
 });
 $('input[type=email],input[type=password]').val('').siblings('label').addClass('active');
 </script>

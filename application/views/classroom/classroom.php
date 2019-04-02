@@ -30,13 +30,13 @@
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">I'm sure</button>
+            <button type="button" class="btn btn-primary" id="sure">I'm sure</button>
           </div>
         </div>
       </div>
     </div>
     <br>
-    <form method="POST">
+    <form method="POST" id="classroom">
     <div class="container">
       <div class="row d-flex justify-content-center">
         <div class="col-md-7">
@@ -161,18 +161,18 @@
       <div class="row d-flex justify-content-center">
         <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
           <div class="btn-group mr-2" role="group" aria-label="First group">
-            <button type="submi" class="btn blue lighten-2" data-toggle="modal" data-target="#basicExampleModal"><i class="fas fa-user" aria-hidden="true"></i></button>
-            <button type="submit" value="1" class="btn blue lighten-2"><i class="fas fa-user" aria-hidden="true"></i></button>
-            <button type="submit" value="2" class="btn blue lighten-2"><i class="fas fa-user" aria-hidden="true"></i></button>
-            <button type="submit" value="3" class="btn blue lighten-2"><i class="fas fa-user" aria-hidden="true"></i></button>
-            <button type="submit" value="4" class="btn blue lighten-2"><i class="fas fa-user" aria-hidden="true"></i></button>
+            <button type="submit" name="btn1" class="btn blue lighten-2" data-toggle="modal" data-target="#basicExampleModal"><i class="fas fa-user" aria-hidden="true"></i></button>
+            <button type="submit" name="btn1" value="1" class="btn blue lighten-2"><i class="fas fa-user" aria-hidden="true"></i></button>
+            <button type="submit" name="btn1" value="2" class="btn blue lighten-2"><i class="fas fa-user" aria-hidden="true"></i></button>
+            <button type="submit" name="btn1" value="3" class="btn blue lighten-2"><i class="fas fa-user" aria-hidden="true"></i></button>
+            <button type="submit" name="btn1" value="4" class="btn blue lighten-2"><i class="fas fa-user" aria-hidden="true"></i></button>
           </div>
           <div class="btn-group mr-2" role="group" aria-label="Second group">
-            <button type="submit" value="5" class="btn blue lighten-2"><i class="fas fa-user" aria-hidden="true"></i></button>
-            <button type="submit" value="6" class="btn blue lighten-2"><i class="fas fa-user" aria-hidden="true"></i></button>
-            <button type="submit" value="7" class="btn blue lighten-2"><i class="fas fa-user" aria-hidden="true"></i></button>
-            <button type="submit" value="8" class="btn blue lighten-2"><i class="fas fa-user" aria-hidden="true"></i></button>
-            <button type="submit" value="9" class="btn blue lighten-2"><i class="fas fa-user" aria-hidden="true"></i></button>
+            <button type="submit" name="btn1" value="5" class="btn blue lighten-2"><i class="fas fa-user" aria-hidden="true"></i></button>
+            <button type="submit" name="btn1" value="6" class="btn blue lighten-2"><i class="fas fa-user" aria-hidden="true"></i></button>
+            <button type="submit" name="btn1" value="7" class="btn blue lighten-2"><i class="fas fa-user" aria-hidden="true"></i></button>
+            <button type="submit" name="btn1" value="8" class="btn blue lighten-2"><i class="fas fa-user" aria-hidden="true"></i></button>
+            <button type="submit" name="btn1" value="9" class="btn blue lighten-2"><i class="fas fa-user" aria-hidden="true"></i></button>
           </div>
 
         </div>
@@ -181,18 +181,18 @@
       <div class="row d-flex justify-content-center">
         <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
           <div class="btn-group mr-2" role="group" aria-label="First group">
-            <button type="submit" value="10" class="btn blue lighten-2"><i class="fas fa-user" aria-hidden="true"></i></button>
-            <button type="submit" value="11" class="btn blue lighten-2"><i class="fas fa-user" aria-hidden="true"></i></button>
-            <button type="submit" value="12" class="btn blue lighten-2"><i class="fas fa-user" aria-hidden="true"></i></button>
-            <button type="submit" value="13" class="btn blue lighten-2"><i class="fas fa-user" aria-hidden="true"></i></button>
-            <button type="submit" value="14" class="btn blue lighten-2"><i class="fas fa-user" aria-hidden="true"></i></button>
+            <button type="submit" name="btn1" value="10" class="btn blue lighten-2"><i class="fas fa-user" aria-hidden="true"></i></button>
+            <button type="submit" name="btn1" value="11" class="btn blue lighten-2"><i class="fas fa-user" aria-hidden="true"></i></button>
+            <button type="submit" name="btn1" value="12" class="btn blue lighten-2"><i class="fas fa-user" aria-hidden="true"></i></button>
+            <button type="submit" name="btn1" value="13" class="btn blue lighten-2"><i class="fas fa-user" aria-hidden="true"></i></button>
+            <button type="submit" name="btn1" value="14" class="btn blue lighten-2"><i class="fas fa-user" aria-hidden="true"></i></button>
           </div>
           <div class="btn-group mr-2" role="group" aria-label="Second group">
-            <button type="submit" value="15" class="btn blue lighten-2"><i class="fas fa-user" aria-hidden="true"></i></button>
-            <button type="submit" value="16" class="btn blue lighten-2"><i class="fas fa-user" aria-hidden="true"></i></button>
-            <button type="submit" value="17" class="btn blue lighten-2"><i class="fas fa-user" aria-hidden="true"></i></button>
-            <button type="submit" value="18" class="btn blue lighten-2"><i class="fas fa-user" aria-hidden="true"></i></button>
-            <button type="submit" value="19" class="btn blue lighten-2"><i class="fas fa-user" aria-hidden="true"></i></button>
+            <button type="submit" name="btn1" value="15" class="btn blue lighten-2"><i class="fas fa-user" aria-hidden="true"></i></button>
+            <button type="submit" name="btn1" value="16" class="btn blue lighten-2"><i class="fas fa-user" aria-hidden="true"></i></button>
+            <button type="submit" name="btn1" value="17" class="btn blue lighten-2"><i class="fas fa-user" aria-hidden="true"></i></button>
+            <button type="submit" name="btn1" value="18" class="btn blue lighten-2"><i class="fas fa-user" aria-hidden="true"></i></button>
+            <button type="submit" name="btn1" value="19" class="btn blue lighten-2"><i class="fas fa-user" aria-hidden="true"></i></button>
           </div>
         </div>
       </div>
@@ -200,18 +200,18 @@
       <div class="row d-flex justify-content-center">
         <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
           <div class="btn-group mr-2" role="group" aria-label="First group">
-            <button type="submit" value="20" class="btn blue lighten-2"><i class="fas fa-user" aria-hidden="true"></i></button>
-            <button type="submit" value="21" class="btn blue lighten-2"><i class="fas fa-user" aria-hidden="true"></i></button>
-            <button type="submit" value="22" class="btn blue lighten-2"><i class="fas fa-user" aria-hidden="true"></i></button>
-            <button type="submit" value="23" class="btn blue lighten-2"><i class="fas fa-user" aria-hidden="true"></i></button>
-            <button type="submit" value="24" class="btn blue lighten-2"><i class="fas fa-user" aria-hidden="true"></i></button>
+            <button type="submit" name="btn1" value="20" class="btn blue lighten-2"><i class="fas fa-user" aria-hidden="true"></i></button>
+            <button type="submit" name="btn1" value="21" class="btn blue lighten-2"><i class="fas fa-user" aria-hidden="true"></i></button>
+            <button type="submit" name="btn1" value="22" class="btn blue lighten-2"><i class="fas fa-user" aria-hidden="true"></i></button>
+            <button type="submit" name="btn1" value="23" class="btn blue lighten-2"><i class="fas fa-user" aria-hidden="true"></i></button>
+            <button type="submit" name="btn1" value="24" class="btn blue lighten-2"><i class="fas fa-user" aria-hidden="true"></i></button>
           </div>
           <div class="btn-group mr-2" role="group" aria-label="Second group">
-            <button type="submit" value="26" class="btn blue lighten-2"><i class="fas fa-user" aria-hidden="true"></i></button>
-            <button type="submit" value="27" class="btn blue lighten-2"><i class="fas fa-user" aria-hidden="true"></i></button>
-            <button type="submit" value="28" class="btn blue lighten-2"><i class="fas fa-user" aria-hidden="true"></i></button>
-            <button type="submit" value="29" class="btn blue lighten-2"><i class="fas fa-user" aria-hidden="true"></i></button>
-            <button type="submit" value="30" class="btn blue lighten-2"><i class="fas fa-user" aria-hidden="true"></i></button>
+            <button type="submit" name="btn1" value="26" class="btn blue lighten-2"><i class="fas fa-user" aria-hidden="true"></i></button>
+            <button type="submit" name="btn1" value="27" class="btn blue lighten-2"><i class="fas fa-user" aria-hidden="true"></i></button>
+            <button type="submit" name="btn1" value="28" class="btn blue lighten-2"><i class="fas fa-user" aria-hidden="true"></i></button>
+            <button type="submit" name="btn1" value="29" class="btn blue lighten-2"><i class="fas fa-user" aria-hidden="true"></i></button>
+            <button type="submit" name="btn1" value="30" class="btn blue lighten-2"><i class="fas fa-user" aria-hidden="true"></i></button>
           </div>
         </div>
       </div>
@@ -219,18 +219,18 @@
       <div class="row d-flex justify-content-center">
         <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
           <div class="btn-group mr-2" role="group" aria-label="First group">
-            <button type="submit" value="31" class="btn blue lighten-2"><i class="fas fa-user" aria-hidden="true"></i></button>
-            <button type="submit" value="32" class="btn blue lighten-2"><i class="fas fa-user" aria-hidden="true"></i></button>
-            <button type="submit" value="33" class="btn blue lighten-2"><i class="fas fa-user" aria-hidden="true"></i></button>
-            <button type="submit" value="34" class="btn blue lighten-2"><i class="fas fa-user" aria-hidden="true"></i></button>
-            <button type="submit" value="35" class="btn blue lighten-2"><i class="fas fa-user" aria-hidden="true"></i></button>
+            <button type="submit" name="btn1" value="31" class="btn blue lighten-2"><i class="fas fa-user" aria-hidden="true"></i></button>
+            <button type="submit" name="btn1" value="32" class="btn blue lighten-2"><i class="fas fa-user" aria-hidden="true"></i></button>
+            <button type="submit" name="btn1" value="33" class="btn blue lighten-2"><i class="fas fa-user" aria-hidden="true"></i></button>
+            <button type="submit" name="btn1" value="34" class="btn blue lighten-2"><i class="fas fa-user" aria-hidden="true"></i></button>
+            <button type="submit" name="btn1" value="35" class="btn blue lighten-2"><i class="fas fa-user" aria-hidden="true"></i></button>
           </div>
           <div class="btn-group mr-2" role="group" aria-label="Second group">
-            <button type="submit" value="36" class="btn blue lighten-2"><i class="fas fa-user" aria-hidden="true"></i></button>
-            <button type="submit" value="37" class="btn blue lighten-2"><i class="fas fa-user" aria-hidden="true"></i></button>
-            <button type="submit" value="38" class="btn blue lighten-2"><i class="fas fa-user" aria-hidden="true"></i></button>
-            <button type="submit" value="39" class="btn blue lighten-2"><i class="fas fa-user" aria-hidden="true"></i></button>
-            <button type="submit" value="40" class="btn blue lighten-2"><i class="fas fa-user" aria-hidden="true"></i></button>
+            <button type="submit" name="btn1" value="36" class="btn blue lighten-2"><i class="fas fa-user" aria-hidden="true"></i></button>
+            <button type="submit" name="btn1" value="37" class="btn blue lighten-2"><i class="fas fa-user" aria-hidden="true"></i></button>
+            <button type="submit" name="btn1" value="38" class="btn blue lighten-2"><i class="fas fa-user" aria-hidden="true"></i></button>
+            <button type="submit" name="btn1" value="39" class="btn blue lighten-2"><i class="fas fa-user" aria-hidden="true"></i></button>
+            <button type="submit" name="btn1" value="40" class="btn blue lighten-2"><i class="fas fa-user" aria-hidden="true"></i></button>
           </div>
         </div>
       </div>
@@ -238,18 +238,18 @@
       <div class="row d-flex justify-content-center">
         <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
           <div class="btn-group mr-2" role="group" aria-label="First group">
-            <button type="submit" value="41" class="btn blue lighten-2"><i class="fas fa-user" aria-hidden="true"></i></button>
-            <button type="submit" value="42" class="btn blue lighten-2"><i class="fas fa-user" aria-hidden="true"></i></button>
-            <button type="submit" value="43" class="btn blue lighten-2"><i class="fas fa-user" aria-hidden="true"></i></button>
-            <button type="submit" value="44" class="btn blue lighten-2"><i class="fas fa-user" aria-hidden="true"></i></button>
-            <button type="submit" value="45" class="btn blue lighten-2"><i class="fas fa-user" aria-hidden="true"></i></button>
+            <button type="submit" name="btn1" value="41" class="btn blue lighten-2"><i class="fas fa-user" aria-hidden="true"></i></button>
+            <button type="submit" name="btn1" value="42" class="btn blue lighten-2"><i class="fas fa-user" aria-hidden="true"></i></button>
+            <button type="submit" name="btn1" value="43" class="btn blue lighten-2"><i class="fas fa-user" aria-hidden="true"></i></button>
+            <button type="submit" name="btn1" value="44" class="btn blue lighten-2"><i class="fas fa-user" aria-hidden="true"></i></button>
+            <button type="submit" name="btn1" value="45" class="btn blue lighten-2"><i class="fas fa-user" aria-hidden="true"></i></button>
           </div>
           <div class="btn-group mr-2" role="group" aria-label="Second group">
-            <button type="submit" value="46" class="btn blue lighten-2"><i class="fas fa-user" aria-hidden="true"></i></button>
-            <button type="submit" value="47" class="btn blue lighten-2"><i class="fas fa-user" aria-hidden="true"></i></button>
-            <button type="submit" value="48" class="btn blue lighten-2"><i class="fas fa-user" aria-hidden="true"></i></button>
-            <button type="submit" value="49" class="btn blue lighten-2"><i class="fas fa-user" aria-hidden="true"></i></button>
-            <button type="submit" value="50" class="btn blue lighten-2" data-toggle="tooltip" data-placement="top" title="@user"><i class="fas fa-user" aria-hidden="true"></i></button>
+            <button type="submit" name="btn1" value="46" class="btn blue lighten-2"><i class="fas fa-user" aria-hidden="true"></i></button>
+            <button type="submit" name="btn1" value="47" class="btn blue lighten-2"><i class="fas fa-user" aria-hidden="true"></i></button>
+            <button type="submit" name="btn1" value="48" class="btn blue lighten-2"><i class="fas fa-user" aria-hidden="true"></i></button>
+            <button type="submit" name="btn1" value="49" class="btn blue lighten-2"><i class="fas fa-user" aria-hidden="true"></i></button>
+            <button type="submit" name="btn1" value="50" class="btn blue lighten-2" data-toggle="tooltip" data-placement="top" title="@user"><i class="fas fa-user" aria-hidden="true"></i></button>
           </div>
         </div>
       </div>
@@ -278,3 +278,18 @@ $('[data-toggle="tooltip"]').tooltip()
   transform: translate(-50%, -50%);
 }
 </style>
+
+<script type="text/javascript">
+  $('#classroom').on('submit', function(e){
+ 
+  $('#basicExampleModal').modal('show');
+   e.preventDefault();
+
+});
+</script>
+<script type="text/javascript">
+  $('#sure').on('click',function()
+  {
+  alert($('.btn').val());
+  });
+</script>

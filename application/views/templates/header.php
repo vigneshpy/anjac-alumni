@@ -182,7 +182,7 @@ div.blockOverlay {
 
 <script type="text/javascript" src="https://bootswatch.com/_vendor/jquery/dist/jquery.min.js" crossorigin="anonymous"></script>
 <script  type="text/javascript" src="https://bootswatch.com/_vendor/popper.js/dist/umd/popper.min.js" crossorigin="anonymous"></script>
-<script  type="text/javascript" src="https://bootswatch.com/_vendor/bootstrap/dist/js/bootstrap.min.js" crossorigin="anonymous">
+<!-- <script  type="text/javascript" src="https://bootswatch.com/_vendor/bootstrap/dist/js/bootstrap.min.js" crossorigin="anonymous"> -->
       
 </script>
   <script
@@ -231,3 +231,4 @@ setTimeout(hideLoader, 20 * 1000);
 
 <script type="text/javascript" src="<?php echo base_url();?>assets/js/sweetalert.min.js"></script>
 
+<script type="text/javascript" src="<?php echo base_url();?>assets/js1/bootstrap.min.js"></script>
