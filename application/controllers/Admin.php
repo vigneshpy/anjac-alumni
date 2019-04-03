@@ -511,6 +511,18 @@ public function need_allow()
 	
 	}
 
+public function job()
+{
+	$this->load->view('templates/admin-head');
+	$this->load->view('admin/job');
+	$this->load->view('templates/admin-foot');
+}
+
+
+
+
+
+
 
 
 

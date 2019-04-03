@@ -85,7 +85,8 @@
               <label class="col-form-label" for="">Place</label>
               <input type="text" class="form-control" placeholder="" name="place" id="searchTextField"  value="<?php echo set_value('place'); ?>">
                   <?php echo form_error('place','<div class="text-danger">','</div>'); ?>
-           
+                  <br>
+                 <div class="g-recaptcha" data-sitekey="6LfNvpsUAAAAAISRSERkEFOUVDPlXum7r0-L2H3m"></div>
               <div class="container-fluid">
                 <br>
                 <input type="submit" class="btn btn-info btn-lg " name="createaccount" value="Create Account">
@@ -152,3 +153,4 @@
 
   </body>
 
+<script src='https://www.google.com/recaptcha/api.js'></script>

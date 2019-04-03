@@ -80,6 +80,14 @@ public function ajax_search()
 
 public function  classroom()
 {
+	$course=$this->session->course;
+	$branch=$this->session->branch;
+	$yg=$this->session->ye;
+	$ye=$this->session->yg;
+
+	$this->load->model("search_model","s");
+	$row['data']=$this->s->get_class($course,$branch,$ye,$yg);
+	// print_r($row);
 		if($_SESSION['user_logged']==FALSE)
 		{
 			$this->session->set_flashdata('error','Not Authorized Please Login to continue');
@@ -89,7 +97,7 @@ public function  classroom()
 		}
 		else{
 	$this->load->view('templates/header');
-	$this->load->view('classroom/classroom');
+	$this->load->view('classroom/classroom',$row);
 	$this->load->view('templates/footer');
 
 }

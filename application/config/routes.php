@@ -19,6 +19,7 @@ $route['forgot']='auth/forgot';
 
 
 $route['home']='home';
+$route['propose-an-job-offer']='home/job';
 
 
 $route['user/profile/(:any)']='user/profile';
@@ -66,6 +67,8 @@ $route['admin/event-request']='admin/event_request';
 
 
 $route['admin/needs-request']='admin/needs_request';
+
+$route['admin/job-request']='admin/job';
 
 
 $route['events/propose-an-event']='events/propose_event';

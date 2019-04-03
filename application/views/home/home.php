@@ -1,3 +1,14 @@
+   <?php if(isset($_SESSION['job_app'])){?>
+   <script type="text/javascript">
+     swal({
+  title: "Great",
+  text: "Your Job offer Requested,It Needs An Approval",
+  icon: "success",
+});
+   </script>  
+
+            <?php }?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -43,6 +54,8 @@
                 href="<?php echo base_url();?>register">Signup</a>
                 <?php else:?>
              <!--    <i class="fas fa-chevron-circle-down"></i>< -->
+              <a href="<?php echo base_url();?>user/profile/<?php echo $this->session->user_name?>" class="btn btn-outline-white wow fadeInDown" data-wow-delay="0.4s">Your Portfolio</a>
+      <a href="<?php echo base_url();?>propose-an-job-offer" class="btn btn-outline-white wow fadeInDown" data-wow-delay="0.4s">Offer An Job</a>
 
                 <?php endif?>
               </div>
@@ -117,6 +130,9 @@
       </div>
     </div>
     <br>
+    <div class="text-center">
+      <a href="<?php echo base_url();?>propose-an-job-offer" class="btn btn-info">Offer An Job</a>
+    </div>
     <br>
     <!-- <h2 class="h2-responsive text-center" style="padding:5px;margin-top:20px;">Needs</h2> -->
     <div class="view" style="background-image: url('<?php echo base_url();?>assets/images1/events.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
@@ -155,91 +171,41 @@
 
     <h2 class="text-center mt-5 mb-5 pb-2 text-dark"><strong>Upcoming Events</strong></h2>
 
-    <div class="container">
-      <!-- Card group -->
-<div class="card-deck">
+    <div class="container" align="center">
+<div class="row" >
+  <?php foreach($data as $row):?>
+<div class="col-lg-4">
+            
 
-  <!-- Card -->
-  <div class="card mb-4 wow fadeInUp"  id="events-card" style="z-index:1;" data-wow-delay="0.4s">
+          <!-- Card -->
+<div class="card" style="bottom:5px;">
 
-    <!-- Card image -->
-    <div class="view overlay">
-      <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/49.jpg" alt="Card image cap">
-      <a href="#!">
-        <div class="mask rgba-white-slight"></div>
-      </a>
-    </div>
+  <!-- Card image -->
 
-    <!-- Card content -->
-    <div class="card-body">
+  <!-- Card content -->
+  <div class="card-body">
 
-      <!-- Title -->
-      <h4 class="card-title">Alumni lecture</h4>
-      <!-- Text -->
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <hr>
-      <p class="card-text">30 feb 2019</p>
-    </div>
-    <!-- Card content -->
+    <!-- Title -->
+     <h4 class="card-title"><?php echo $row['event_name']?></h4>
+    <!-- Text -->
+    <p class="card-text"><?php echo $row['event_description']?></p>
+    <hr>
+    <p class="card-text"><i class="fa fa-calendar"></i><?php echo " ".$row['event_date']?></p>
+    <p class="card-text"><i class="fa fa-clock"> </i> <?php echo $row['event_time']?></p>
+    <!-- Button -->
+    <button type="button" name="button" class="btn btn-primary" data-toggle="modal" data-target="#basicExampleModal">Know more</button>
 
   </div>
-  <!-- Card -->
 
-  <!-- Card -->
-  <div class="card mb-4 wow fadeInUp"  id="events-card" style="z-index:1;" data-wow-delay="0.3s">
-
-    <!-- Card image -->
-    <div class="view overlay">
-      <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/48.jpg" alt="Card image cap">
-      <a href="#!">
-        <div class="mask rgba-white-slight"></div>
-      </a>
-    </div>
-
-    <!-- Card content -->
-    <div class="card-body">
-      <!-- Title -->
-      <h4 class="card-title">Alumni party</h4>
-      <!-- Text -->
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <hr>
-      <p class="card-text">30 feb 2019</p>
-    </div>
-    <!-- Card content -->
-
-  </div>
-  <!-- Card -->
-
-  <!-- Card -->
-  <div class="card mb-4 wow fadeInUp"  id="events-card" style="z-index:1;" data-wow-delay="0.4s">
-
-
-    <!-- Card image -->
-    <div class="view overlay">
-      <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/77.jpg" alt="Card image cap">
-      <a href="#!">
-        <div class="mask rgba-white-slight"></div>
-      </a>
-    </div>
-
-    <!-- Card content -->
-    <div class="card-body">
-
-      <!-- Title -->
-      <h4 class="card-title">Alumni meet</h4>
-      <!-- Text -->
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <hr>
-      <p class="card-text">30 feb 2019</p>
-    </div>
-    <!-- Card content -->
-
-  </div>
-  <!-- Card -->
 
 </div>
+  <br>
+
+</div>
+<?php endforeach?>
 <!-- Card group -->
     </div>
+  </div>
 <br>
 <br>
     <!-- Full Page Intro -->
@@ -342,8 +308,8 @@
     <script type="text/javascript">
       // Animations init
       new WOW().init();
+      swal(title:'hi',icon:'success');
     </script>
-ipt>
 </html>
 <?php if(!(isset($_SESSION['user_logged'])==1)):?>
   

@@ -59,7 +59,7 @@
                         <a class="nav-link" href="<?php echo base_url();?>admin/needs-request">
                             <i class="fa fa-sticky-note-o"></i>
                                 <span class='badge badge-warning' id='lblCartCount'><?php echo $nor1?></span>
-                            <p>Alumni Needs</p>
+                            <p>Alumni Feeds</p>
                         </a>
                     </li>
             <!--         <li>
@@ -90,7 +90,7 @@
                     </li> 
                
                     <li>
-                        <a class="nav-link" href="">
+                        <a class="nav-link" href="<?php echo base_url();?>admin/job-request">
                             <i class="fa fa-briefcase"></i>
                             <p>Jobs And Internship</p>
                         </a>

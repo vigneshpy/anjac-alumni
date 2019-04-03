@@ -59,4 +59,25 @@ CASE
 	$sql=$this->db->query($query);
 	return $sql->result_array();
 }
+
+
+public function  get_class($course,$branch,$ye,$yg)
+{
+
+$query=$this->db->query("SELECT * FROM register WHERE course='$course' AND branch='$branch' AND year_entry='$ye' AND 
+
+year_grad='$yg'");
+
+
+return $query->result_array();
+
+
 }
+
+
+
+}
+
+
+
+

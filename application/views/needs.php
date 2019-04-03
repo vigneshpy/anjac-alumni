@@ -20,7 +20,7 @@
               <div class="row wow fadeIn">
                 <!--Grid column-->
                 <div class="col-md-12 mb-4 white-text text-center wow fadeIn">
-                  <h3 class="display-4 font-weight-bold white-text mb-0 pt-md-5 pt-5">Needs</h3>
+                  <h3 class="display-4 font-weight-bold white-text mb-0 pt-md-5 pt-5">Feeds</h3>
                   <hr class="hr-light my-4 w-75">
                   <h4 class="subtext-header mt-2 mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit deleniti consequuntur nihil.</h4>
                   <a href="#!" class="btn btn-rounded btn-outline-white">

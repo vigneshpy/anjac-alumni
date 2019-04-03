@@ -65,7 +65,7 @@
                             <h1 style="display: block; margin: 0px; padding: 0px; color: rgb(32, 32, 32); font-family: Helvetica; font-size: 26px; font-style: normal; font-weight: bold; line-height: 125%; letter-spacing: normal; text-align: left;">It's time to Activate Your Account</h1>
 
 <p style="margin: 10px 0px; padding: 0px; color: rgb(32, 32, 32); font-family: Helvetica; font-size: 16px; line-height: 150%; text-align: left;">Hey There Mail from Anjac&nbsp;&nbsp;<br>
-<br><p style="margin: 10px 0px; padding: 0px; color: rgb(32, 32, 32); font-family: Helvetica; font-size: 16px; line-height: 150%; text-align: left;">HThank You For Be the Member of Anjac Alumni <?php echo $fname ?><br>
+<br><p style="margin: 10px 0px; padding: 0px; color: rgb(32, 32, 32); font-family: Helvetica; font-size: 16px; line-height: 150%; text-align: left;">Thank You For Be the Member of Anjac Alumni <b><?php echo $fname ?></b><br>
 <br>
 Kindly Activate Your Account by click on Activate Now<br>
 <br>

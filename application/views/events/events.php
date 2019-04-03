@@ -58,7 +58,7 @@
                 <div class="col-md-12 mb-4 white-text text-center wow fadeIn">
                   <h3 class="display-4 font-weight-bold white-text mb-0 pt-md-5 pt-5">Events</h3>
                   <hr class="hr-light my-4 w-75">
-                  <h4 class="subtext-header mt-2 mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit deleniti consequuntur nihil.</h4>
+                  <h4 class="subtext-header mt-2 mb-4">To develop a permanent network that keeps students in touch with each other and the college through special events.</h4>
                   <a href="<?php echo base_url();?>events/propose-an-event" class="btn btn-rounded btn-outline-white">
                     <i class="far fa-calendar-alt"></i> Propose an event
                   </a>

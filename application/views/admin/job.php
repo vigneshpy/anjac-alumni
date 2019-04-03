@@ -18,48 +18,44 @@
                         <div class="col-md-12">
                             <div class="card strpied-tabled-with-hover">
                                 <div class="card-header ">
-                                    <h4 class="card-title" align="center">Requested  Feeds</h4>
+                                    <h4 class="card-title" align="center">Requested  Jobs</h4>
                                   </div>
                                 <div class="card-body  table-responsive">
                                     <table class="table table-hover table-striped" style="border-spacing: 1px !important;">
                                         <thead>
-                                            <tr><th>Post ID</th>
-                                            <th>Posted By</th>
-
-                                            <th>Email</th>
-
-                                            <th>User Name</th>
+                                            <tr><th>ID</th>
+                                            <th>Job title</th>
                                   
-                                           <th>Category</th>
-                                           <th>Content</th>
-                                            <th>Posted Date</th>
-                                        
-                                       
-                                                  <th >Action</th>
+                                           <th>Job summary</th>
+                                            <th>Location</th>
+                                            <th>Experience</th>
+                                                                                      
+                                            <th>Salary</th>
+                                            <th>Link</th>
+                                           <th >Action</th>
                                 </tr></thead>
                                         <tbody>
                                           <?php foreach($data as $row):?>
                                             <tr>
-                                                <td><?php echo $row['need_id']?></td>
+                                                <td><?php echo $row['job_id']?></td>
                                               
-                                                <td><?php echo $row['posted_by']?></td>
+                                                <td><?php echo $row['job_name']?></td>
                                         
-                                                <td><?php echo $row['user_email']?></td>
+                                                <td><?php echo $row['job_summary']?></td>
                                           
-                                                <td ><?php echo $row['user_name']?></td>
-                                                <td ><?php echo $row['category']?></td>
-                                                <td ><?php echo $row['body']?></td>
-                                                <td ><?php echo $row['added_date']?></td>
+                                                <td ><?php echo $row['job_date']?></td>
+                                                <td ><?php echo $row['student_participate']?></td>
+                                                <td ><?php echo $row['no_student']?></td>
                                              
                                                 <td>
 
 
                                                 <button class="update_user btn btn-info outline" id=""data-toggle="modal" data-backdrop="false" data-target="#updatemodal" style="padding:5px;margin:5px;"><i class="fa fa-eye"></i></button>
 
-                                                <button tool-tip="Allow" class="allow_need btn btn-success outline" id="<?php echo $row['need_id']?>" style="padding:5px;margin:5px;"><i class="fa fa-check"></i></button> 
+                                                <button tool-tip="Allow" class="allow_job btn btn-success outline" id="<?php echo $row['job_id']?>" style="padding:5px;margin:5px;"><i class="fa fa-check"></i></button> 
                                                 
                                                   
-                                                <button class="reject_need btn btn-danger outline" tool-tip="deny" id="<?php echo $row['need_id']?>" style="padding:5px;margin:5px;"><i class="fa fa-times"></i></button> 
+                                                <button class="reject_job btn btn-danger outline" tool-tip="deny" id="<?php echo $row['job_id']?>" style="padding:5px;margin:5px;"><i class="fa fa-times"></i></button> 
 
 
 
@@ -83,40 +79,33 @@
                         <div class="col-md-12">
                             <div class="card strpied-tabled-with-hover">
                                 <div class="card-header ">
-                                    <h4 class="card-title" align="center">Approved  Feeds</h4>
+                                    <h4 class="card-title" align="center">Approved  jobs</h4>
                                   </div>
                                 <div class="card-body  table-responsive">
                                     <table class="table table-hover table-striped" style="border-spacing: 1px !important;">
                                         <thead>
-                                            <tr><th>Post ID</th>
-                                            <th>Posted By</th>
-
-                                            <th>Email</th>
-
-                                            <th>User Name</th>
+                                            <tr><th>ID</th>
+                                            <th>job Name</th>
                                   
-                                           <th>Category</th>
-                                           
-                                           <th>Content</th>
-
-                                            <th>Posted Date</th>
+                                           <th>summary</th>
+                                            <th>job Date</th>
                                         
-                                       
+                                            <th>Year of Students</th>
+                                            <th>Total No of Students</th>
                                                   <th >Action</th>
                                 </tr></thead>
                                         <tbody>
                                           <?php foreach($data1 as $row):?>
                                             <tr>
-                                                <td><?php echo $row['need_id']?></td>
+                                                <td><?php echo $row['job_id']?></td>
                                               
-                                                <td><?php echo $row['posted_by']?></td>
+                                                <td><?php echo $row['job_name']?></td>
                                         
-                                                <td><?php echo $row['user_email']?></td>
+                                                <td><?php echo $row['job_summary']?></td>
                                           
-                                                <td ><?php echo $row['user_name']?></td>
-                                                <td ><?php echo $row['category']?></td>
-                                                <td ><?php echo $row['body']?></td>
-                                                <td ><?php echo $row['added_date']?></td>
+                                                <td ><?php echo $row['job_date']?></td>
+                                                <td ><?php echo $row['student_participate']?></td>
+                                                <td ><?php echo $row['no_student']?></td>
                                              
                                                 <td>
 
@@ -125,7 +114,7 @@
 
                                              
                                                 
-                                                <button class="reject_need btn btn-danger outline" tool-tip="deny" id="<?php echo $row['need_id']?>" style="padding:5px;margin:5px;"><i class="fa fa-times"></i></button> 
+                                                <button class="reject_job btn btn-danger outline" tool-tip="deny" id="<?php echo $row['job_id']?>" style="padding:5px;margin:5px;"><i class="fa fa-times"></i></button> 
 
 
 
@@ -149,50 +138,43 @@
                         <div class="col-md-12">
                             <div class="card strpied-tabled-with-hover">
                                 <div class="card-header ">
-                                    <h4 class="card-title" align="center">Denied  Feeds</h4>
+                                    <h4 class="card-title" align="center">Denied  jobs</h4>
                                   </div>
                                 <div class="card-body  table-responsive">
                                     <table class="table table-hover table-striped" style="border-spacing: 1px !important;">
                                         <thead>
-                                              <thead>
-                                            <tr><th>Post ID</th>
-                                            <th>Posted By</th>
-
-                                            <th>Email</th>
-
-                                            <th>User Name</th>
+                                            <tr><th>ID</th>
+                                            <th>job Name</th>
                                   
-                                           <th>Category</th>
-                                           <th>Content/th>
-                                            <th>Posted Date</th>
+                                           <th>summary</th>
+                                            <th>job Date</th>
                                         
-                                       
-                                                  <th>Action</th>
-                        
-                              </thead>
+                                            <th>Year of Students</th>
+                                            <th>Total No of Students</th>
+                                                  <th >Action</th>
+                                </tr></thead>
                                         <tbody>
                                           <?php foreach($data2 as $row):?>
                                             <tr>
-                                                <td><?php echo $row['need_id']?></td>
+                                                <td><?php echo $row['job_id']?></td>
                                               
-                                                <td><?php echo $row['posted_by']?></td>
+                                                <td><?php echo $row['job_name']?></td>
                                         
-                                                <td><?php echo $row['user_email']?></td>
+                                                <td><?php echo $row['job_summary']?></td>
                                           
-                                                <td ><?php echo $row['user_name']?></td>
-                                                <td ><?php echo $row['category']?></td>
-                                                <td ><?php echo $row['body']?></td>
-                                                <td ><?php echo $row['added_date']?></td></tr>
+                                                <td ><?php echo $row['job_date']?></td>
+                                                <td ><?php echo $row['student_participate']?></td>
+                                                <td ><?php echo $row['no_student']?></td>
                                              
                                                 <td>
 
-                                                      <button tool-tip="Allow" class="allow_need btn btn-success outline" id="<?php echo $row['need_id']?>" style="padding:5px;margin:5px;"><i class="fa fa-check"></i></button> 
+                                                      <button tool-tip="Allow" class="allow_job btn btn-success outline" id="<?php echo $row['job_id']?>" style="padding:5px;margin:5px;"><i class="fa fa-check"></i></button> 
 
                                                 <button class="update_user btn btn-info outline" id=""data-toggle="modal" data-backdrop="false" data-target="#updatemodal" style="padding:5px;margin:5px;"><i class="fa fa-eye"></i></button>
 
                                                     
                                                 
-                                                <button class="reject_need_delete btn btn-danger outline" tool-tip="deny" id="<?php echo $row['need_id']?>" style="padding:5px;margin:5px;"><i class="fa fa-trash"></i></button> 
+                                                <button class="reject_job_delete btn btn-danger outline" tool-tip="deny" id="<?php echo $row['job_id']?>" style="padding:5px;margin:5px;"><i class="fa fa-trash"></i></button> 
 
 
 
@@ -205,59 +187,16 @@
                                     </table>
                                 </div>
                             </div>
-                              <div class="col-md-12">
-                            <div class="card strpied-tabled-with-hover">
-                                <div class="card-header ">
-                                    <h4 class="card-title" align="center">Comments(Reply)</h4>
-                                  </div>
-                                <div class="card-body  table-responsive">
-                                    <table class="table table-hover table-striped" style="border-spacing: 1px !important;">
-                                        <thead>
-                                      
-                                            <th>Comment Id</th>
-                                            <th>Commented By</th>
-                                            <th>Comment</th>
-                                            <th>email</th>
-                                            <th>Date</th>
-                                     
-                                  
-                                       
-                                       
-                                              <th  style="margin-top:20px;">Action</th>
-                                </tr></thead>
-                                        <tbody>
-                                          <?php foreach($data3 as $row):?>
-                                            <tr>
-                                                <td><?php echo $row['comment_id']?></td>
-                                                <td><img src="<?php echo $row['profile_pic']?>" alt="<?php echo $row['commented_by']?>" class="mr-3 mt-3 rounded-circle" style="width:45px;"><?php echo $row['commented_by']?></td>
-                                                <td><?php echo $row['comment_text']?></td>
-                                                <td><?php echo $row['user_email']?></td>
-                                                <td><?php echo $row['date']?></td>
-                                         
-                                      
-                                            
-                                        
-                                                <td style="margin-top:20px;"><a href="<?php echo base_url();?>needs/details?id=<?php echo $row['post_id']?>" class="btn btn-primary" tooltip="view the user" style="padding:5px;margin:5px;"><i class="fa fa-eye"></i></a>
-
-                                                      <button class="delete_comment btn btn-danger outline" id="<?php echo $row['post_id']?>" style="padding:5px;margin:5px;"><i class="fa fa-trash"></i></button
-                                                        ></td>
-                                                                             
-                                            </tr>
-                                           <?php endforeach?>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
                         </div>
-                        </div>
+                   
               </div>
-      
+            
 
 <div class="modal fade" id="updatemodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">View Requested needs</h5>
+        <h5 class="modal-title" id="exampleModalLongTitle">View Requested jobs</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -281,19 +220,19 @@
             <input type="text" class="form-control" id="evt-name" name="email" disabled>
             <input type="hidden" class="form-control" id="evt-id" name="eid" disabled>
           </div>
-           <h5 align="center">need Details</h5>
+           <h5 align="center">job Details</h5>
           <div class="form-group" align="">
-            <label for="recipient-name" class="col-form-label">need Name</label>
+            <label for="recipient-name" class="col-form-label">job Name</label>
             <input type="text" class="form-control" id="evt-name" name="ename" disabled>
             <input type="hidden" class="form-control" id="evt-id" name="eid" disabled>
           </div>
      
          <div class="form-group" align="">
-            <label for="evt-name" class="col-form-label">need Description</label>
+            <label for="evt-name" class="col-form-label">job summary</label>
             <input type="text" class="form-control" id="evt-des" name="edecription" disabled>
           </div>   
           <div class="form-group" align="">
-            <label for="evt-date" class="col-form-label">need Date</label>
+            <label for="evt-date" class="col-form-label">job Date</label>
             <input type="date" class="form-control" id="evt-date" name="edate" disabled>
           </div> 
       
@@ -322,25 +261,25 @@
 
 
 <script type="text/javascript">
-//delete needs
+//delete jobs
  $(document).on('click', '.update_user', function(){  
-           var need_id = $(this).attr("id");  
+           var job_id = $(this).attr("id");  
 
           
            $.ajax({   
-                url:"<?php echo base_url();?>admin/update_need",  
+                url:"<?php echo base_url();?>admin/update_job",  
                 method:"GET",  
-                data:{need_id:need_id},  
+                data:{job_id:job_id},  
                 success:function(data){  
                   // alert(data);
                   var response = JSON.parse(data);
 
-                    $('#evt-name').val(response.posted_by);  
-                    $('#evt-id').val(response.need_id);  
+                    $('#evt-name').val(response.job_name);  
+                    $('#evt-id').val(response.job_id);  
                    
-                     $('#evt-des').val(response.need_description);  
-                     $('#evt-date').val(response.need_date);  
-                     $('#evt-time').val(response.need_time);  
+                     $('#evt-des').val(response.job_summary);  
+                     $('#evt-date').val(response.job_date);  
+                     $('#evt-time').val(response.job_time);  
             
 
                       }  
@@ -353,7 +292,7 @@
 
           $(document).on('click', '#update_changes', function(){
                          $.ajax({   
-                url:"<?php echo base_url();?>admin/update_need1",  
+                url:"<?php echo base_url();?>admin/update_job1",  
                 method:"GET",  
                 data:$('#updateform').serialize(),
                  beforeSend:function(){  
@@ -395,19 +334,19 @@ $(document).ready(function()
 {
 
 
-    $(".delete_need").click(function()
+    $(".delete_job").click(function()
     {
      
       swal({
   title: "Are you sure?",
-  text: "you want to Deny this need",
+  text: "you want to Deny this job",
   icon: "warning",
   buttons: true,
   dangerMode: true,
 })
 .then((willDelete) => {
   if (willDelete) {
-    swal("Poof! Requested need Denied", {
+    swal("Poof! Requested job Denied", {
       icon: "success",
 
     });
@@ -416,7 +355,7 @@ var del_id = $(this).attr('id');
 var element = $(this);
 $.ajax({
             type:'GET',
-            url:'<?php echo base_url();?>admin/need_delete',
+            url:'<?php echo base_url();?>admin/job_delete',
             data:'delete_id='+del_id,
             success: function(data)
             {
@@ -442,41 +381,40 @@ $.ajax({
 
 
 <script type="text/javascript">
-  //allow need
+  //allow job
 $(document).ready(function()
 
 {
 
 
-    $(".allow_need").click(function()
+    $(".allow_job").click(function()
     {
      
       swal({
   title: "Are you sure?",
-  text: "you want to Allow this need",
+  text: "you want to Allow this job",
   icon: "warning",
   buttons: true,
   dangerMode: true,
 })
 .then((willDelete) => {
   if (willDelete) {
-    swal("need Allowed", {
+    swal("job Allowed", {
       icon: "success",
 
     });
 
-var need_id = $(this).attr('id');
+var job_id = $(this).attr('id');
 var element = $(this);
-
-
 $.ajax({
             type:'GET',
-            url:'<?php echo base_url();?>admin/need_allow',
-            data:'need_id='+need_id,
+            url:'<?php echo base_url();?>admin/job_allow',
+            data:'job_id='+job_id,
             success: function(data)
             {
                  
-                    location.reload();            }
+                    window.location.reload();
+            }
 
         });
  $(this).parents("tr").animate({ backgroundColor: "#003" }, "slow")
@@ -496,35 +434,35 @@ $.ajax({
 
 
 <script type="text/javascript">
-  //deny need
+  //deny job
 $(document).ready(function()
 
 {
 
 
-    $(".deny_need1").click(function()
+    $(".deny_job1").click(function()
     {
      
       swal({
   title: "Are you sure?",
-  text: "you want to Deny this need",
+  text: "you want to Deny this job",
   icon: "warning",
   buttons: true,
   dangerMode: true,
 })
 .then((willDelete) => {
   if (willDelete) {
-    swal("need Rejected", {
+    swal("job Rejected", {
       icon: "warning",
 
     });
 
-var need_id = $(this).attr('id');
+var job_id = $(this).attr('id');
 var element = $(this);
 $.ajax({
             type:'GET',
-            url:'<?php echo base_url();?>admin/need_deny',
-            data:'need_id='+need_id,
+            url:'<?php echo base_url();?>admin/job_deny',
+            data:'job_id='+job_id,
             success: function(data)
             {
                  window.location.reload();
@@ -547,35 +485,35 @@ $.ajax({
 </script>
 
 <script type="text/javascript">
-  //reject need
+  //reject job
 $(document).ready(function()
 
 {
 
 
-    $(".reject_need_delete").click(function()
+    $(".reject_job_delete").click(function()
     {
      
       swal({
   title: "Are you sure?",
-  text: "you want to Delete this Requested need",
+  text: "you want to Delete this Requested job",
   icon: "warning",
   buttons: true,
   dangerMode: true,
 })
 .then((willDelete) => {
   if (willDelete) {
-    swal("need deleted", {
+    swal("job deleted", {
       icon: "warning",
 
     });
 
-var need_id = $(this).attr('id');
+var job_id = $(this).attr('id');
 var element = $(this);
 $.ajax({
             type:'GET',
-            url:'<?php echo base_url();?>admin/need_deny_delete',
-            data:'need_id='+need_id,
+            url:'<?php echo base_url();?>admin/job_deny_delete',
+            data:'job_id='+job_id,
             success: function(data)
             {
                  
@@ -605,35 +543,35 @@ $.ajax({
 
 
 <script type="text/javascript">
-  //reject need
+  //reject job
 $(document).ready(function()
 
 {
 
 
-    $(".reject_need").click(function()
+    $(".reject_job").click(function()
     {
      
       swal({
   title: "Are you sure?",
-  text: "you want to Deny this need",
+  text: "you want to Deny this job",
   icon: "warning",
   buttons: true,
   dangerMode: true,
 })
 .then((willDelete) => {
   if (willDelete) {
-    swal("need Rejected", {
+    swal("job Rejected", {
       icon: "warning",
 
     });
 
-var need_id = $(this).attr('id');
+var job_id = $(this).attr('id');
 var element = $(this);
 $.ajax({
             type:'GET',
-            url:'<?php echo base_url();?>admin/need_deny',
-            data:'need_id='+need_id,
+            url:'<?php echo base_url();?>admin/job_deny',
+            data:'job_id='+job_id,
             success: function(data)
             {
                  
@@ -656,21 +594,21 @@ $.ajax({
 </script>
 <script type="text/javascript">
 $(document).on('click', '.update_user', function(){  
-           var need_id = $(this).attr("id");  
+           var job_id = $(this).attr("id");  
           
            $.ajax({   
-                url:"<?php echo base_url();?>admin/view_request_need",  
+                url:"<?php echo base_url();?>admin/view_request_job",  
                 method:"GET",  
-                data:{need_id:need_id},  
+                data:{job_id:job_id},  
                 success:function(data){  
                   // alert(data);
                   var response = JSON.parse(data);
-                    $('#evt-name').val(response.posted_by);  
-                    $('#evt-id').val(response.need_id);  
+                    $('#evt-name').val(response.job_name);  
+                    $('#evt-id').val(response.job_id);  
                    
-                     $('#evt-des').val(response.need_description);  
-                     $('#evt-date').val(response.need_date);  
-                     $('#evt-time').val(response.need_time);  
+                     $('#evt-des').val(response.job_summary);  
+                     $('#evt-date').val(response.job_date);  
+                     $('#evt-time').val(response.job_time);  
             
                       }  
                     });
@@ -681,7 +619,7 @@ $(document).on('click', '.update_user', function(){
 <script type="text/javascript">
           $(document).on('click', '#update_changes', function(){
                          $.ajax({   
-                url:"<?php echo base_url();?>admin/update_need1",  
+                url:"<?php echo base_url();?>admin/update_job1",  
                 method:"GET",  
                 data:$('#updateform').serialize(),
                  beforeSend:function(){  
@@ -695,53 +633,4 @@ $(document).on('click', '.update_user', function(){
                   
                   
            }); });     
-</script>
-
-
-
-<script type="text/javascript">
-  
-
-    $(".delete_comment").click(function()
-    {
-     
-      swal({
-  title: "Are you sure?",
-  text: "Once deleted, you will not be able to recover this user",
-  icon: "warning",
-  buttons: true,
-  dangerMode: true,
-})
-.then((willDelete) => {
-  if (willDelete) {
-    swal("Poof! User Removed", {
-      icon: "success",
-
-    });
-
-var del_id = $(this).attr('id');
-var element = $(this);
-alert(del_id);
-$.ajax({
-            type:'GET',
-            url:'<?php echo base_url();?>admin/comment_delete',
-            data:'delete_id='+del_id,
-            success: function(data)
-            {
-                 
-                  
-            }
-
-        });
- $(this).parents("tr").animate({ backgroundColor: "#003" }, "slow")
-  .animate({ opacity: "hide" }, "slow");
-  } else {
-    swal("Cancelled",{
-      icon:"info",
-    });
-  }
-});
-
-    });
-
-</script>
+</script>`

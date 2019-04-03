@@ -40,6 +40,7 @@
           
 
               </div>
+
               <!--Body-->
               <div class="">
 
@@ -48,6 +49,10 @@
 <?php echo form_error('email','<div class="text-danger"style="text-shadow: 1px 1px black;">','</div>'); ?>
 
               </div>
+                     <br>
+                 <div class="g-recaptcha" data-sitekey="6LfNvpsUAAAAAISRSERkEFOUVDPlXum7r0-L2H3m"></div>
+              <div class="container-fluid">
+                <br>
               <div class="text-center mt-4">
                 <input  class="btn btn-info my-4" type="submit" name="forgot" value="Reset password">
               <br>
@@ -70,3 +75,4 @@
   
   </body>
 </html>
+<script src='https://www.google.com/recaptcha/api.js'></script>

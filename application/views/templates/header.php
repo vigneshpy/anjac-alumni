@@ -134,7 +134,7 @@ div.blockOverlay {
         <a class="nav-link" href="<?php echo base_url();?>events">Events</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="<?php echo base_url();?>needs">Alumni Needs</a>
+        <a class="nav-link" href="<?php echo base_url();?>needs">Alumni Feeds</a>
 </li>
  <li class="nav-item">
         <div class="dropdown">

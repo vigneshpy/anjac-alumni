@@ -3,19 +3,20 @@
 
 
 <br>
-<h3 align="center">Alumni Needs</h3>
+<h3 align="center">Alumni Feeds</h3>
 
 <br>
 
-<p align="center">Ask a member for help or offer help.</p>
+<p align="center">Add Your Post !! to Communicate with alumni</p>
 <?php if(isset($_SESSION['user_logged'])==TRUE):?>
 
 <form class="" method="GET"> 
-<a class="btn btn-info" href="<?php echo base_url();?>addneed">Add Your Needs</a>
+<a class="btn btn-info" href="<?php echo base_url();?>addneed">Add Your Feeds</a>
 </form>
 <?php elseif(isset($_SESSION['user_logged'])==FALSE && isset($_SESSION['admin_logged'])==1):?>
 <p>Welcome Admin</p>
-
+<?php else:?>
+<a class="btn btn-info" href="<?php echo base_url();?>login" title="Login to Post">Login</a>
 
 
 
@@ -45,7 +46,7 @@
 
 <br>
 
-<h5 align="center">No Needs Yet!!</h5>
+<h5 align="center">No Feeds Yet!!</h5>
 
 </div>
 
@@ -54,7 +55,7 @@
 
 
 
-<h4>Needs By other Alumni's</h4>
+<h4>Feeds By other Alumni's</h4>
 
 <br>
 <div class="row">

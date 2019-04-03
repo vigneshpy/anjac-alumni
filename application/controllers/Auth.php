@@ -162,7 +162,7 @@ public function __construct()
                     
                 );
 
-                print_r($username);
+           
                 
                 $this->session->set_userdata($data);
                 $this->session->set_flashdata('warning', 'Fill Out The Neccessary Fields');
@@ -231,7 +231,25 @@ public function __construct()
                 $this->form_validation->set_rules('place', 'place', 'trim|xss_clean|required', array(
                     'required' => 'Your Place is required'
                 ));
-                
+                $secret_key = '6LfNvpsUAAAAAJdNVOWa8X9iRphaY5I38FfcoRNs'; // Your Google reCaptcha secret key
+ 
+if(!empty($_POST['g-recaptcha-response']))
+{
+ // Request the Google server to validate our captcha
+ $request = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret='.$secret_key.'&response='.$_POST['g-recaptcha-response']);
+ // The result is in a JSON format. Decoding..
+ $response = json_decode($request);
+ 
+ if($response->success)
+ {
+  // Here goes your code.
+  echo "<script>alert('Congratulations! You have passed the reCaptcha!')</script>";
+ }
+ else
+ {
+  echo 'Please, try again. You must complete the Captcha!';
+ }
+}
                 
                 if ($this->form_validation->run() == FALSE) {
                     
@@ -303,21 +321,17 @@ public function __construct()
                         
                      
                         
-                        
-                        
+                        $set  = '123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+                        $code = substr(str_shuffle($set), 0, 12);
                         $cod = array(
                             'code' => $code,
                             'id' => $username,
                             'fname' => $fname,
-                            'email' => $email
-                        );
+                            'email' => $email);
                         $this->session->set_userdata($cod);
-                        
-                        $message = $this->load->view('email/body', $cod, TRUE);
-                        
-                        
-                        // $this->email->initialize($config);
-                        
+                         $message = $this->load->view('email/body', $cod, TRUE);
+                        $this->email->initialize();
+                        $this->email->set_newline("\r\n");                          
                         $this->load->library('email');
                         $this->email->from('alumnianjac@gmail.com', 'Anjac');
                         $this->email->to($email, $this->session->userdata('fname'));
@@ -328,8 +342,8 @@ public function __construct()
                             
                             redirect('login', 'refresh');
                         } else {
-                             print_r($this->email->print_debugger());
-                            // $this->session->set_flashdata('error','Some thing Went Wrong');
+                             // print_r($this->email->print_debugger());
+                            $this->session->set_flashdata('error','Some thing Went Wrong');
                             
                             redirect('basicinfo', 'refresh');
                             
@@ -433,7 +447,26 @@ public function __construct()
                 $id = $this->auth_models->getid($femail);
              
                 $user = $this->auth_models->forgot($femail);
-     
+     if(!empty($_POST['g-recaptcha-response']))
+{
+ // Request the Google server to validate our captcha
+    $secret_key='6LfNvpsUAAAAAJdNVOWa8X9iRphaY5I38FfcoRNs';
+ $request = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret='.$secret_key.'&response='.$_POST['g-recaptcha-response']);
+ // The result is in a JSON format. Decoding..
+ $response = json_decode($request);
+ 
+ print_r($response);
+ if($response->success)
+ {
+  // Here goes your code.
+  echo "<script>alert('Congratulations! You have passed the reCaptcha!')</script>";
+ }
+ else
+ {
+  echo 'Please, try again. You must complete the Captcha!';
+ }
+}
+  
                             if ($user) {
                     $set  = '123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
                     $code = substr(str_shuffle($set), 0, 24);

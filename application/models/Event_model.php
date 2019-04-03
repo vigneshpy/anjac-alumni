@@ -12,7 +12,14 @@ public function __construct()
 
 public function get_events()
 
-{		$sql="SELECT event_name,event_description,DATE_FORMAT(event_date, ' %b %d %Y') AS event_date,DATE_FORMAT(event_time, '%h:%i %p')AS event_time FROM events order by event_date ASC limit 5";
+{		$sql="SELECT event_name,event_description,DATE_FORMAT(event_date, ' %b %d %Y') AS event_date,DATE_FORMAT(event_time, '%h:%i %p')AS event_time FROM events order by event_date ASC limit 0,5";
+	$query=$this->db->query($sql);
+	return $query->result_array();
+	
+}
+public function get_events_home()
+
+{		$sql="SELECT event_name,event_description,DATE_FORMAT(event_date, ' %b %d %Y') AS event_date,DATE_FORMAT(event_time, '%h:%i %p')AS event_time FROM events order by event_date ASC limit 0,3";
 	$query=$this->db->query($sql);
 	return $query->result_array();
 	
